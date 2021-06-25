@@ -81,6 +81,7 @@ h3, .h3{
     @extend.font-barlow-regular;
     color: $primary-color-navy;
     margin-bottom: 0;
+    line-height: 100%;
     &.bold{
         @extend.font-barlow-bold;
     }
@@ -94,12 +95,12 @@ h3, .h3{
 .white{
     color: $primary-color-white;
 }
-a{
+a, button{
     display: block;
     text-decoration: none;
     color: $primary-color-navy;
     opacity: 1;
-    @extend.cubicTransition;
+    //@extend.cubicTransition;
     line-height: 100%;
     box-shadow: none !important;
     &:hover{
@@ -109,14 +110,15 @@ a{
 }
 .btn{
     background-color: $primary-color-pink;
-    padding: 10px 20px;
+    padding: 10px 40px;
     @extend.font-barlow-medium;
     color: $primary-color-white;
     border: 1px solid $primary-color-pink;
-    @extend.cubicTransition;
+    //@extend.cubicTransition;
     font-size: 14px;
     border-radius: 7px;
     box-shadow: none !important;
+    line-height: 100%;
     &:hover{
         color: $primary-color-white;
         //background-color: transparent;
@@ -124,7 +126,7 @@ a{
     }
 }
 .grey-box{
-    padding: 20px;
+    padding: 26px 20px;
     background-color: rgba($color: $primary-color-navy, $alpha: 0.03);
     border-radius: 7px;
     position: relative;
@@ -187,6 +189,7 @@ ul{
     border: none;
     border-radius: 7px;
     line-height: 2rem;
+    box-shadow: none !important;
 }
 
 

@@ -15,7 +15,7 @@ header{
             &:after{
                 content: '';
                 position: absolute;
-                top: 25%;
+                top: 10%;
                 right: 0;
                 width: 7px;
                 height: 7px;
@@ -27,9 +27,12 @@ header{
     }
     .dropdown-toggle{
         opacity: 1;
-        @extend.cubicTransition;
+        //@extend.cubicTransition;
         .txt{
             line-height: 100%;
+            span{
+                @extend.font-dosis-regular;
+            }
         }
         .user-img{
             width: 36px;
@@ -48,7 +51,7 @@ header{
             background-size: contain;
             border: none;
             @extend.half-opacity;
-            @extend.cubicTransition;
+            //@extend.cubicTransition;
         }
         &.show{
             &:after{
@@ -111,18 +114,19 @@ footer{
 
 ///////////////////////////// GET STARTED /////////////////////////////
 .fit-height{
-    height: calc(100vh - 256px);
+    min-height: calc(100vh - 256px);
+    //display: flex;
 }
 .content-wrapper{
     position: relative;
     width: 100%;
     //height: 100%;
     .vertical-center-box{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 100%;
-        transform: translate(-50%, -50%);
+        //position: absolute;
+        //top: 50%;
+        //left: 50%;
+        //width: 100%;
+        //transform: translate(-50%, -50%);
     }
 }
 
@@ -141,7 +145,7 @@ footer{
             left: 0;
             transform: translateY(-50%);
             width: 100%;
-            opacity: 0.5;
+            opacity: 0.15;
             .h3{
                 color: $primary-color-navy;
             }
@@ -150,7 +154,7 @@ footer{
             position: absolute;
             @extend.font-barlow-semibold;
             font-size: 120px;
-            color: $primary-color-white;
+            color: $primary-color-navy;
             opacity: .08;
             top: -10px;
             right: 0;
@@ -184,6 +188,7 @@ footer{
                     color: $primary-color-white;
                 }
             }
+            .number{color: $primary-color-white;}
             .icon-white{
                 display: block;
             }
@@ -213,7 +218,7 @@ footer{
     position: relative;
     width: 38px;
     height: 38px;
-    opacity: .7;
+    opacity: .25;
     img{
         width: 100%;
         height: 100%;
