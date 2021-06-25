@@ -153,7 +153,8 @@ ul {
   border: none;
   border-radius: 7px;
   line-height: 2rem;
-  box-shadow: none !important; }
+  box-shadow: none !important;
+  padding: 15px; }
 
 .ar .grey-box .close {
   right: inherit;
