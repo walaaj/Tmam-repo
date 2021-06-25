@@ -1,0 +1,258 @@
+@import "common.scss";
+
+///////////////////////////// HEADER /////////////////////////////
+header{
+    padding: 20px 0;
+    background-color: rgba($color: $primary-color-navy, $alpha: .04);
+    .notification{
+        img{
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+        }
+        &.new-notification{
+            position: relative;
+            &:after{
+                content: '';
+                position: absolute;
+                top: 25%;
+                right: 0;
+                width: 7px;
+                height: 7px;
+                background-color: $primary-color-pink;
+                border-radius: 50%;
+                box-shadow: 0px 2px 6px 0px $primary-color-pink;
+            }
+        }
+    }
+    .dropdown-toggle{
+        opacity: 1;
+        @extend.cubicTransition;
+        .txt{
+            line-height: 100%;
+        }
+        .user-img{
+            width: 36px;
+            height: 36px; 
+            border-radius: 7px;
+            overflow: hidden;
+            object-fit: cover;  
+            vertical-align: middle;  
+        }
+        &::after{
+            background-image: url("../images/static/arrow-down.svg");
+            width: 10px;
+            height: 8px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            border: none;
+            @extend.half-opacity;
+            @extend.cubicTransition;
+        }
+        &.show{
+            &:after{
+                transform: rotate(180deg);
+            }
+        }
+        &:hover{
+            opacity: .5;
+        }
+    }
+}
+
+
+
+
+///////////////////////////// FOOTER /////////////////////////////
+footer{
+    padding: 14px 0;
+    background-color: rgba($color: $primary-color-navy, $alpha: .04);
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-image: url("../images/dynamic/separator.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .footer-content{
+        li{
+            padding: 0 10px;
+            position: relative;
+            &::after{
+                content: "-";
+                position: absolute;
+                top: 50%;
+                right: -2px;
+                transform: translateY(-50%);
+                width: 5px;
+            }
+            &:first-child(){
+                padding-left: 0;
+            }
+            &:last-child(){
+                &:after{
+                    display: none;
+                }
+            }
+        }
+    }
+    .rights{
+        font-size: 10px; 
+    }
+}
+
+
+///////////////////////////// GET STARTED /////////////////////////////
+.fit-height{
+    height: calc(100vh - 256px);
+}
+.content-wrapper{
+    position: relative;
+    width: 100%;
+    //height: 100%;
+    .vertical-center-box{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+///////////////////////////// ADMIN PAGE /////////////////////////////
+.steps-list{
+    height: 120px;
+    li{
+        background-color: $primary-color-white;
+        width: calc(25% - 2px);
+        margin: 0 1px;
+        position: relative;
+        overflow: hidden;
+        .steps-list-content{
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 100%;
+            opacity: 0.5;
+            .h3{
+                color: $primary-color-navy;
+            }
+        }
+        .number{
+            position: absolute;
+            @extend.font-barlow-semibold;
+            font-size: 120px;
+            color: $primary-color-white;
+            opacity: .08;
+            top: -10px;
+            right: 0;
+        }
+        .icon-white , .icon-blue{
+            width: 40px;
+            height: 28px;
+            object-fit: contain;
+        }
+        .icon-white{
+            display: none;
+        }
+        .icon-blue{
+            display: block;
+        }
+        &.active{
+            .steps-list-content{
+                opacity: 1;
+            }
+        }
+        &.done{
+            opacity: .75;
+            .steps-list-content{
+                opacity: 1;
+            }
+        }
+        &.active, &.done{
+            background-color: $primary-color-navy;
+            .steps-list-content{
+                .h3{
+                    color: $primary-color-white;
+                }
+            }
+            .icon-white{
+                display: block;
+            }
+            .icon-blue{
+                display: none;
+            }
+        }
+        &:first-child(){
+            border-radius: 14px 0 0 14px;
+        }
+        &:last-child(){
+            border-radius: 0 14px 14px 0;
+        }
+    }
+}
+.wizard-content{
+    .icon-blue{
+        width: 28px;
+        height: 28px;
+        object-fit: contain;
+    }
+    .dropdown-toggle{
+        background: $primary-color-white;
+    }
+}
+.add-new-icon{
+    position: relative;
+    width: 38px;
+    height: 38px;
+    opacity: .7;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    &:after{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -8px;
+        width: 10px;
+        height: 10px;
+        background-image: url("../images/static/plus.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px){
+    .steps-list{
+        height: 60px;
+        li{
+            .number{
+                font-size: 60px;
+            }
+        }
+    }
+    .content-wrapper {
+        .vertical-center-box{
+            position: relative;
+            top: inherit;
+            left: inherit;
+            width: 100%;
+            transform: none;
+        }
+    }
+    .fit-height {
+        height: auto;
+    }
+}

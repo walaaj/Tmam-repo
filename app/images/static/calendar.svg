@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="13.5" height="14.9" viewBox="0 0 13.5 14.9">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #2b2a35;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 0.9px;
+      }
+
+      .cls-2 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="calendar-2036122" transform="translate(0.45 0.45)">
+    <line id="Line_195" data-name="Line 195" class="cls-1" x2="12.483" transform="translate(0.062 5.183)"/>
+    <line id="Line_196" data-name="Line 196" class="cls-1" x2="0.006" transform="translate(9.41 7.917)"/>
+    <line id="Line_197" data-name="Line 197" class="cls-1" x2="0.006" transform="translate(6.304 7.917)"/>
+    <line id="Line_198" data-name="Line 198" class="cls-1" x2="0.006" transform="translate(3.191 7.917)"/>
+    <line id="Line_199" data-name="Line 199" class="cls-1" x2="0.006" transform="translate(9.41 10.637)"/>
+    <line id="Line_200" data-name="Line 200" class="cls-1" x2="0.006" transform="translate(6.304 10.637)"/>
+    <line id="Line_201" data-name="Line 201" class="cls-1" x2="0.006" transform="translate(3.191 10.637)"/>
+    <line id="Line_202" data-name="Line 202" class="cls-1" y2="2.188" transform="translate(9.131)"/>
+    <line id="Line_203" data-name="Line 203" class="cls-1" y2="2.188" transform="translate(3.476)"/>
+    <path id="Path_11959" data-name="Path 11959" class="cls-2" d="M9.267,1.579H3.34A3.018,3.018,0,0,0,0,4.843v6.362a3.047,3.047,0,0,0,3.34,3.324H9.26a3.02,3.02,0,0,0,3.34-3.271V4.843A3.007,3.007,0,0,0,9.267,1.579Z" transform="translate(0 -0.529)"/>
+  </g>
+</svg>

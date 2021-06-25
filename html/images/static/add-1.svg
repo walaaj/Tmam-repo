@@ -1,0 +1,19 @@
+<svg id="Polaris-icon_Major_Mono_Circle_Plus" data-name="Polaris-icon/Major/Mono/Circle Plus" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+    </style>
+    <clipPath id="clip-path">
+      <path id="Icon" class="cls-1" d="M10,20A10,10,0,1,1,20,10,10.011,10.011,0,0,1,10,20ZM10,2a8,8,0,1,0,8,8A8.009,8.009,0,0,0,10,2Zm0,13a1,1,0,0,1-1-1V11H6A1,1,0,1,1,6,9H9V6a1,1,0,1,1,2,0V9h3a1,1,0,1,1,0,2H11v3A1,1,0,0,1,10,15Z"/>
+    </clipPath>
+  </defs>
+  <g id="Group_35" data-name="Group 35" transform="translate(0 0)">
+    <path id="Icon-2" data-name="Icon" class="cls-1" d="M10,20A10,10,0,1,1,20,10,10.011,10.011,0,0,1,10,20ZM10,2a8,8,0,1,0,8,8A8.009,8.009,0,0,0,10,2Zm0,13a1,1,0,0,1-1-1V11H6A1,1,0,1,1,6,9H9V6a1,1,0,1,1,2,0V9h3a1,1,0,1,1,0,2H11v3A1,1,0,0,1,10,15Z"/>
+  </g>
+</svg>

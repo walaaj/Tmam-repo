@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="19.092" height="19.041" viewBox="0 0 19.092 19.041">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        fill-rule: evenodd;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #2b2a35;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.2px;
+      }
+
+      .cls-2 {
+        fill: #2b2a35;
+      }
+    </style>
+  </defs>
+  <g id="chat-2036119" transform="translate(0.69 0.6)">
+    <path id="Path_11890" data-name="Path 11890" class="cls-1" d="M8.888,0A8.838,8.838,0,0,0,1.005,12.929l.177.345a1.151,1.151,0,0,1,.084.884,17.5,17.5,0,0,0-.632,2.054c0,.354.1.556.481.547A16.149,16.149,0,0,0,3.1,16.186a1.308,1.308,0,0,1,.843.051c.244.118.742.421.759.421A8.842,8.842,0,1,0,8.888,0Z" transform="translate(0 0)"/>
+    <circle id="Ellipse_2510" data-name="Ellipse 2510" class="cls-2" cx="0.884" cy="0.884" r="0.884" transform="translate(3.789 7.954)"/>
+    <circle id="Ellipse_2511" data-name="Ellipse 2511" class="cls-2" cx="0.884" cy="0.884" r="0.884" transform="translate(8.004 7.954)"/>
+    <circle id="Ellipse_2512" data-name="Ellipse 2512" class="cls-2" cx="0.884" cy="0.884" r="0.884" transform="translate(12.219 7.954)"/>
+  </g>
+</svg>

@@ -1,0 +1,200 @@
+/* -----------------------------------------------------
+Fonts
+----------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Dosis:wght@400;500;700&display=swap');
+.font-dosis-regular{
+    font-family: 'Dosis', sans-serif;
+    font-weight: 400;
+}
+.font-dosis-medium{
+    font-family: 'Dosis', sans-serif;
+    font-weight: 500;
+}
+.font-dosis-bold{
+    font-family: 'Dosis', sans-serif;
+    font-weight: 700;
+}
+.font-barlow-regular{
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+}
+.font-barlow-medium{
+    font-family: 'Barlow', sans-serif;
+    font-weight: 500;
+}
+.font-barlow-semibold{
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+}
+.font-barlow-bold{
+    font-family: 'Barlow', sans-serif;
+    font-weight: 700;
+}
+
+
+/* -----------------------------------------------------
+Colors
+----------------------------------------------------- */
+$primary-color-black: #2B2A35;
+$primary-color-pink: #FF0956;
+$primary-color-purple: #86347E;
+$primary-color-navy: #32325D;
+$primary-color-white: #F9F9F9;
+
+
+/* -----------------------------------------------------
+Styles
+----------------------------------------------------- */
+
+.w-50{
+    width: 50%;
+}
+.cubicTransition{
+    transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);
+    -webkit-transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);
+    -moz-transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);
+    -o-transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+
+.half-opacity{
+    opacity: .5;
+}
+h1, .h1, h2, .h2, h3, .h3{
+    @extend.font-barlow-semibold;
+    color: $primary-color-black;
+    &.bold{
+        @extend.font-barlow-bold;
+    }
+}
+h1, .h1{
+    font-size: 32px;
+}
+h2, .h2{
+    font-size: 20px;
+}
+h3, .h3{
+    font-size: 16px;
+}
+.txt{
+    font-size: 14px;
+    @extend.font-barlow-regular;
+    color: $primary-color-navy;
+    margin-bottom: 0;
+    &.bold{
+        @extend.font-barlow-bold;
+    }
+    &.bigger{
+        font-size: 16px;
+    }
+}
+.uppercase{
+    text-transform: uppercase;
+}
+.white{
+    color: $primary-color-white;
+}
+a{
+    display: block;
+    text-decoration: none;
+    color: $primary-color-navy;
+    opacity: 1;
+    @extend.cubicTransition;
+    line-height: 100%;
+    box-shadow: none !important;
+    &:hover{
+        opacity: 0.5;
+        color: $primary-color-navy;
+    }
+}
+.btn{
+    background-color: $primary-color-pink;
+    padding: 10px 20px;
+    @extend.font-barlow-medium;
+    color: $primary-color-white;
+    border: 1px solid $primary-color-pink;
+    @extend.cubicTransition;
+    font-size: 14px;
+    border-radius: 7px;
+    box-shadow: none !important;
+    &:hover{
+        color: $primary-color-white;
+        //background-color: transparent;
+        //color: $primary-color-pink;
+    }
+}
+.grey-box{
+    padding: 20px;
+    background-color: rgba($color: $primary-color-navy, $alpha: 0.03);
+    border-radius: 7px;
+    position: relative;
+    .close{
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        right: 10px;
+        top: 10px;
+        opacity: .7;
+        img{
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+.dropdown-toggle{
+    border: none;
+    background: none;
+}
+.logo-wrapper{
+    background-color: rgba($color: $primary-color-navy, $alpha: 0.03);
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    position: relative;
+    img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 13px;
+        height: 26px;
+        object-fit: cover;
+    }
+    &.big{
+        width: 190px;
+        height: 190px;
+        border-radius: 40px;
+        img{
+            width: 65px;
+            height: 130px;
+        }
+    }
+}
+ul{
+    margin: 0;
+    padding: 0;
+    li{
+        display: inline-block;
+        height: 100%;
+        font-size: 14px;
+        @extend.font-barlow-regular;
+        color: $primary-color-navy;
+        //opacity: .5;
+    }
+}
+.form-control, .form-select{
+    border: none;
+    border-radius: 7px;
+    line-height: 2rem;
+}
+
+
+.ar{
+    .grey-box{
+        .close{
+            right: inherit;
+            left: 10px;
+        }
+    }
+}
