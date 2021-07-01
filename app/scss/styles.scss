@@ -237,6 +237,18 @@ footer{
         background-size: contain;
     }
 }
+.modal{
+    .modal-content{
+        padding: 30px 64px;
+        border: none;
+        border-radius: 14px;
+        background-color: $primary-color-white;
+        .close{
+            top: 30px;
+            right: 30px;
+        }
+    }
+}
 
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px){

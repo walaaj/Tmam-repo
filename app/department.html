@@ -79,7 +79,7 @@
         <div class="row justify-content-center mb-5">
           <div class="col-10">
             <ul class="w-100 d-flex steps-list">
-              <li class="d-inline-block active">
+              <li class="d-inline-block done">
                 <div class="steps-list-content text-center">
                   <img src="images/static/admin-white.svg" alt="" class="icon-white my-auto mx-auto mb-md-2">
                   <img src="images/static/admin-blue.svg" alt="" class="icon-blue my-auto mx-auto mb-md-2">
@@ -87,7 +87,7 @@
                 </div>
                 <div class="number">1</div>
               </li>
-              <li class="d-inline-block">
+              <li class="d-inline-block active">
                 <div class="steps-list-content text-center">
                   <img src="images/static/dashboard-white.svg" alt="" class="icon-white my-auto mx-auto mb-md-2">
                   <img src="images/static/dashboard-blue.svg" alt="" class="icon-blue my-auto mx-auto mb-md-2">
@@ -117,16 +117,20 @@
         <div class="row justify-content-center">
           <div class="col-md-8">
             <div class="text-center wizard-content mb-5">
-              <img src="images/static/admin-blue.svg" alt="admin icon" class="icon-blue my-auto mx-auto mb-md-2">
-              <h1>Add Administrators</h1>
+              <img src="images/static/dashboard-border.svg" alt="admin icon" class="icon-blue my-auto mx-auto mb-md-2">
+              <h1>Add Department</h1>
               <p class="txt half-opacity bigger">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy</p>
             </div>
             <div class="text-center wizard-content mb-5">
               <div class="row">
                 <div class="col-md-6 mb-3">
                   <div class="grey-box text-start">
-                    <img src="images/static/admin-blue.svg" alt="admin icon" class="d-inline-block me-2 align-middle">
-                    <p class="txt d-inline-block align-middle">Nadim.Jarudi@tamam.com</p>
+                    <div class="w-50-fit d-inline-block">
+                      <p class="txt align-middle">Management</p>
+                    </div>
+                    <div class="w-50-fit d-inline-block">
+                      <p class="txt align-middle text-end small pink">Edit Admins (0)</p>
+                    </div>
                     <a href="javascript:;" class="close">
                       <img src="images/static/close.svg" alt="close">
                     </a>
@@ -134,8 +138,12 @@
                 </div>
                 <div class="col-md-6 mb-3">
                   <div class="grey-box text-start">
-                    <img src="images/static/admin-blue.svg" alt="admin icon" class="d-inline-block me-2 align-middle">
-                    <p class="txt d-inline-block align-middle">Indrek.Pari@tmam.com</p>
+                    <div class="w-50-fit d-inline-block">
+                      <p class="txt align-middle">Operations</p>
+                    </div>
+                    <div class="w-50-fit d-inline-block">
+                      <p class="txt align-middle text-end small pink">Edit Admins (1)</p>
+                    </div>
                     <a href="javascript:;" class="close">
                       <img src="images/static/close.svg" alt="close">
                     </a>
@@ -143,100 +151,72 @@
                 </div>
                 <div class="col-md-6 mb-3">
                   <div class="grey-box text-start">
-                    <img src="images/static/admin-blue.svg" alt="admin icon" class="d-inline-block me-2 align-middle">
-                    <p class="txt d-inline-block align-middle">Maseeh.ahmed@tmam.com</p>
+                    <div class="w-50-fit d-inline-block">
+                      <p class="txt align-middle">Human Resource</p>
+                    </div>
+                    <div class="w-50-fit d-inline-block">
+                      <p class="txt align-middle text-end small pink">Edit Admins (0)</p>
+                    </div>
                     <a href="javascript:;" class="close">
                       <img src="images/static/close.svg" alt="close">
                     </a>
                   </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="grey-box text-start">
+                    <div class="w-50-fit d-inline-block">
+                      <p class="txt align-middle">Finance</p>
+                    </div>
+                    <div class="w-50-fit d-inline-block">
+                      <p class="txt align-middle text-end small pink">Edit Admins (2)</p>
+                    </div>
+                    <a href="javascript:;" class="close">
+                      <img src="images/static/close.svg" alt="close">
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="grey-box text-start">
+                    <div class="w-50-fit d-inline-block">
+                      <p class="txt align-middle">Purchase</p>
+                    </div>
+                    <div class="w-50-fit d-inline-block">
+                      <p class="txt align-middle text-end small pink">Edit Admins (7)</p>
+                    </div>
+                    <a href="javascript:;" class="close">
+                      <img src="images/static/close.svg" alt="close">
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="grey-box text-start">
+                    <div class="w-50-fit d-inline-block">
+                      <p class="txt align-middle">Sales</p>
+                    </div>
+                    <div class="w-50-fit d-inline-block">
+                      <p class="txt align-middle text-end small pink">Edit Admins (0)</p>
+                    </div>
+                    <a href="javascript:;" class="close">
+                      <img src="images/static/close.svg" alt="close">
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="row my-3">
+                <div class="col-12">
+                  <!-- Button trigger modal -->
+                  <a href="department.html" class="btn add-new-btn" data-bs-toggle="modal" data-bs-target="#addDep">
+                    <img src="images/static/plus.svg" alt="add new" class="d-inline-block me-2">
+                    <p class="d-inline-block mb-0">Add Departement</p>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="row justify-content-center">
-          <div class="col-md-8">
-            <form class="grey-box text-start wizard-content ">
-              <div class="row mb-4">
-                <div class="col">
-                  <label for="exampleInputEmail1" class="form-label h3">Email:</label>
-                  <input type="email" class="form-control txt" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email address..">
-                  <!-- <div id="emailHelp" class="form-text txt half-opacity">We'll never share your email with anyone else.</div> -->
-                </div>
-              </div>
-              <div class="row mb-4">
-                <div class="col-md-6 mb-4 mb-md-0">
-                  <label for="exampleInputNumber1" class="form-label h3">Mobile number:</label>
-                  <div class="input-group txt" id="exampleInputNumber1">
-                    <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">961</button>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">971</a></li>
-                      <li><a class="dropdown-item" href="#">01</a></li>
-                      <li><a class="dropdown-item" href="#">974</a></li>
-                    </ul>
-                    <input type="text" class="form-control txt" aria-label="Text input with dropdown button" placeholder="Enter phone number..">
-                  </div>
-                </div>
-                <div class="col-md-6 mb-4 mb-md-0">
-                  <label for="exampleInputRole1" class="form-label h3">Role:</label>
-                  <select id="exampleInputRole1" class="form-select txt">
-                    <option selected>Choose...</option>
-                    <option>...</option>
-                  </select>
-                </div>
-              </div>
-              <div class="row mb-4">
-                <div class="col">
-                  <div class="grey-box text-start wizard-content">
-                    <ul>
-                      <li class="half-opacity me-4 mb-2">
-                        <img src="images/static/check.svg" alt="check image" class="d-inline-block me-2">
-                        <p class="txt d-inline-block">Admin Access</p>
-                      </li>
-                      <li class="half-opacity me-4 mb-2">
-                        <img src="images/static/check.svg" alt="check image" class="d-inline-block me-2">
-                        <p class="txt d-inline-block">Suspend Cards </p>
-                      </li>
-                      <li class="half-opacity me-4 mb-2">
-                        <img src="images/static/check.svg" alt="check image" class="d-inline-block me-2">
-                        <p class="txt d-inline-block">Create Cards</p>
-                      </li>
-                      <li class="half-opacity me-4 mb-2">
-                        <img src="images/static/check.svg" alt="check image" class="d-inline-block me-2">
-                        <p class="txt d-inline-block">Create People</p>
-                      </li>
-                      <li class="half-opacity me-4 mb-2">
-                        <img src="images/static/check.svg" alt="check image" class="d-inline-block me-2">
-                        <p class="txt d-inline-block">Create</p>
-                      </li>
-                      <li class="half-opacity me-4 mb-2">
-                        <img src="images/static/check.svg" alt="check image" class="d-inline-block me-2">
-                        <p class="txt d-inline-block">Create Department</p>
-                      </li>
-                      <li class="half-opacity me-4 mb-2">
-                        <img src="images/static/check.svg" alt="check image" class="d-inline-block me-2">
-                        <p class="txt d-inline-block">Approve Card Requests</p>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="row mb-4">
-                <div class="col">
-                  <div class="add-new-icon align-middle my-auto">
-                    <img src="images/static/admin-blue.svg" alt="admin icon">
-                  </div>
-                </div>
-                <div class="col">
-                  <button type="button" class="btn float-end" data-bs-toggle="modal" data-bs-target="#addAdmin">Invite User</button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
         <div class="row justify-content-center my-4">
           <div class="col-md-8 text-center">
-            <a href="department.html" class="btn">Continue</a>
+            <a href="user.html" class="btn">Continue</a>
           </div>
         </div>
       </div>
@@ -264,57 +244,22 @@
 
 
     <!-- Modal -->
-    <div class="modal fade" id="addAdmin" tabindex="-1" aria-labelledby="addAdminLabel" aria-hidden="true">
+    <div class="modal fade" id="addDep" tabindex="-1" aria-labelledby="addDepLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="row mb-4">
             <div class="col-12 text-center">
               <img src="images/static/dashboard-border.svg" alt="admin icon" class="icon-blue my-auto mx-auto mb-md-2">
-              <h3>Marketing  Department Admins</h3>
-            </div>
-          </div>
-          <div class="row mb-4">
-            <p class="txt mb-3 bold">Edit  Admin:</p>
-            <div class="col-12 mb-3">
-              <div class="grey-box text-start">
-                <img src="images/static/admin-blue.svg" alt="admin icon" class="d-inline-block me-2 align-middle">
-                <p class="txt d-inline-block align-middle">Maseeh.ahmed@tmam.com</p>
-                <a href="javascript:;" class="close">
-                  <img src="images/static/close.svg" alt="close">
-                </a>
-              </div>
-            </div>
-            <div class="col-12 mb-3">
-              <div class="grey-box text-start">
-                <img src="images/static/admin-blue.svg" alt="admin icon" class="d-inline-block me-2 align-middle">
-                <p class="txt d-inline-block align-middle">Maseeh.ahmed@tmam.com</p>
-                <a href="javascript:;" class="close">
-                  <img src="images/static/close.svg" alt="close">
-                </a>
-              </div>
-            </div>
-            <div class="col-12 mb-3">
-              <div class="grey-box text-start">
-                <img src="images/static/admin-blue.svg" alt="admin icon" class="d-inline-block me-2 align-middle">
-                <p class="txt d-inline-block align-middle">Maseeh.ahmed@tmam.com</p>
-                <a href="javascript:;" class="close">
-                  <img src="images/static/close.svg" alt="close">
-                </a>
-              </div>
+              <h3>Add Department</h3>
             </div>
           </div>
           <form class="row">
-            <div class="mb-3">
-              <label for="exampleInputAdmin" class="form-label d-none">Select Admin</label>
-              <select class="form-select grey-box text-start txt" aria-label="Default select" id="exampleInputAdmin">
-                <option selected disabled>Select Admin</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon"><img src="images/static/dashboard-border.svg" alt="" class="w-100 half-opacity"></span>
+              <input type="text" class="form-control input-txt grey-box txt" placeholder="Enter department name here..." aria-label="" aria-describedby="basic-addon">
             </div>
             <div class="col-12 text-center">
-              <button type="submit" class="btn">Add Admin</button>
+              <button type="submit" class="btn w-100">Add Departement</button>
             </div>
           </form>
           <a href="javascript:;" class="close" data-bs-dismiss="modal">

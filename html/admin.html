@@ -79,7 +79,7 @@
         <div class="row justify-content-center mb-5">
           <div class="col-10">
             <ul class="w-100 d-flex steps-list">
-              <li class="d-inline-block done">
+              <li class="d-inline-block active">
                 <div class="steps-list-content text-center">
                   <img src="images/static/admin-white.svg" alt="" class="icon-white my-auto mx-auto mb-md-2">
                   <img src="images/static/admin-blue.svg" alt="" class="icon-blue my-auto mx-auto mb-md-2">
@@ -87,7 +87,7 @@
                 </div>
                 <div class="number">1</div>
               </li>
-              <li class="d-inline-block active">
+              <li class="d-inline-block">
                 <div class="steps-list-content text-center">
                   <img src="images/static/dashboard-white.svg" alt="" class="icon-white my-auto mx-auto mb-md-2">
                   <img src="images/static/dashboard-blue.svg" alt="" class="icon-blue my-auto mx-auto mb-md-2">
@@ -228,7 +228,7 @@
                   </div>
                 </div>
                 <div class="col">
-                  <button type="submit" class="btn float-end">Invite User</button>
+                  <button type="button" class="btn float-end" data-bs-toggle="modal" data-bs-target="#addAdmin">Invite User</button>
                 </div>
               </div>
             </form>
@@ -236,7 +236,7 @@
         </div>
         <div class="row justify-content-center my-4">
           <div class="col-md-8 text-center">
-            <a href="javascript:;" class="btn">Continue</a>
+            <a href="department.html" class="btn">Continue</a>
           </div>
         </div>
       </div>
@@ -261,5 +261,67 @@
         </div>
       </div>
     </footer>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="addAdmin" tabindex="-1" aria-labelledby="addAdminLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="row mb-4">
+            <div class="col-12 text-center">
+              <img src="images/static/dashboard-border.svg" alt="admin icon" class="icon-blue my-auto mx-auto mb-md-2">
+              <h3>Marketing  Department Admins</h3>
+            </div>
+          </div>
+          <div class="row mb-4">
+            <p class="txt mb-3 bold">Edit  Admin:</p>
+            <div class="col-12 mb-3">
+              <div class="grey-box text-start">
+                <img src="images/static/admin-blue.svg" alt="admin icon" class="d-inline-block me-2 align-middle">
+                <p class="txt d-inline-block align-middle">Maseeh.ahmed@tmam.com</p>
+                <a href="javascript:;" class="close">
+                  <img src="images/static/close.svg" alt="close">
+                </a>
+              </div>
+            </div>
+            <div class="col-12 mb-3">
+              <div class="grey-box text-start">
+                <img src="images/static/admin-blue.svg" alt="admin icon" class="d-inline-block me-2 align-middle">
+                <p class="txt d-inline-block align-middle">Maseeh.ahmed@tmam.com</p>
+                <a href="javascript:;" class="close">
+                  <img src="images/static/close.svg" alt="close">
+                </a>
+              </div>
+            </div>
+            <div class="col-12 mb-3">
+              <div class="grey-box text-start">
+                <img src="images/static/admin-blue.svg" alt="admin icon" class="d-inline-block me-2 align-middle">
+                <p class="txt d-inline-block align-middle">Maseeh.ahmed@tmam.com</p>
+                <a href="javascript:;" class="close">
+                  <img src="images/static/close.svg" alt="close">
+                </a>
+              </div>
+            </div>
+          </div>
+          <form class="row">
+            <div class="mb-3">
+              <label for="exampleInputAdmin" class="form-label d-none">Select Admin</label>
+              <select class="form-select grey-box text-start txt" aria-label="Default select" id="exampleInputAdmin">
+                <option selected disabled>Select Admin</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+            <div class="col-12 text-center">
+              <button type="submit" class="btn">Add Admin</button>
+            </div>
+          </form>
+          <a href="javascript:;" class="close" data-bs-dismiss="modal">
+            <img src="images/static/close.svg" alt="close">
+          </a>
+        </div>
+      </div>
+    </div>
 </body>
 </html>
