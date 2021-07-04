@@ -3,9 +3,21 @@ jQuery(function($){
     ///////////////////////////////////////////////////////////////   START DOCUMENT READY  ///////////////////////////////////////////////////////////////
     
     $(document).ready(function() {
-        $(".illustration-info .btn").click(function(){
-            $(".illustration-video").removeClass("d-none");
-        })
+        $(".eye-slash").click(function(){
+            console.log("eye clicked")
+            //event.preventDefault();
+            if($('#show_hide_password input').attr("type") == "text"){
+                console.log("type text")
+                $('#show_hide_password input').attr('type', 'password');
+                $('#show_hide_password .bi-eye-fill').removeClass( "d-none" );
+                $('#show_hide_password .bi-eye-slash-fill').addClass( "d-none" );
+            }else if($('#show_hide_password input').attr("type") == "password"){
+                console.log("type password")
+                $('#show_hide_password input').attr('type', 'text');
+                $('#show_hide_password .bi-eye-fill').addClass( "d-none" );
+                $('#show_hide_password .bi-eye-slash-fill').removeClass( "d-none" );
+            }
+        });
     });
     
     ///////////////////////////////////////////////////////////////   END DOCUMENT READY  ///////////////////////////////////////////////////////////////

@@ -249,6 +249,11 @@ footer{
         }
     }
 }
+.eye-slash{
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
 
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px){
