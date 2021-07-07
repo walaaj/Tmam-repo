@@ -1,9 +1,13 @@
 @import "common.scss";
 
+
+body{
+    min-height: 100%;
+}
 ///////////////////////////// HEADER /////////////////////////////
 header{
     padding: 20px 0;
-    background-color: rgba($color: $primary-color-navy, $alpha: .04);
+    background-color: $primary-color-white;
     .notification{
         img{
             width: 20px;
@@ -70,7 +74,7 @@ header{
 ///////////////////////////// FOOTER /////////////////////////////
 footer{
     padding: 14px 0;
-    background-color: rgba($color: $primary-color-navy, $alpha: .04);
+    background-color: $primary-color-white;
     position: relative;
     &::before{
         content: '';
@@ -116,6 +120,9 @@ footer{
 .fit-height{
     min-height: calc(100vh - 256px);
     //display: flex;
+}
+.fit-height-listing{
+    min-height: calc(100vh - 152px); 
 }
 .content-wrapper{
     position: relative;
@@ -255,6 +262,115 @@ footer{
     right: 0;
 }
 
+///////////////////////////// PEOPLE PAGE /////////////////////////////
+.sibebar{
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: $primary-color-white;
+    .logo-wrapper{
+        width: 105px;
+        height: 105px;
+        background-color: #fff;
+        img{
+            width: 24px;
+            height: 48px;
+        }
+    }
+    .nav-item{
+        .nav-link{
+            img{
+                width: 16px;
+                height: 16px;
+                object-fit: contain;
+            }
+        }
+        &.active{
+            .nav-link{
+                opacity: 1;
+            }
+        }
+    }
+}
+.filter{
+    .input-group-text{
+        width: 30px;
+        height: 30px;
+        background-color: rgba($color: $primary-color-navy, $alpha: .3);
+        padding: 7.5px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
+.btn-search{
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    transform: translateY(-50%);
+}
+.table-wrapper{
+    width: 100%;
+    overflow-x: scroll;
+}
+.table{
+    .img-wrapper{
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+        vertical-align: middle;
+        img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    .row-status{
+        .txt{
+            .status-color{
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+                overflow: hidden;
+                background-color: $primary-color-pink;
+            }
+            &.disabled{
+                opacity: 50%;
+                .status-color{
+                    background-color: $primary-color-navy;
+                }
+            }
+        }
+    }
+}
+// Comon mobile & Tablet
+@media (min-width: 100px) and (max-width: 1000px){
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px){
+    .sibebar {
+        .logo-wrapper{
+            width: 70px;
+            height: 70px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px){
     .steps-list{
@@ -276,5 +392,25 @@ footer{
     }
     .fit-height {
         height: auto;
+    }
+    .sibebar {
+        .logo-wrapper{
+            width: 30px;
+            height: 30px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+    .btn-search{
+        padding: 10px;
+    }
+    .nav-pills {
+        .nav-link{
+            padding: 0;
+            text-align: center;
+        }
     }
 }

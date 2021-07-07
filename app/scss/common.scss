@@ -48,6 +48,7 @@ Styles
 
 .w-50-fit{
     width: calc(50% - 4px);
+    display: inline-block;
 }
 .w-10{
     width: calc( 10% - 3px);
@@ -87,6 +88,7 @@ Styles
 .half-opacity{
     opacity: .5;
 }
+.no-bg{background-color: transparent !important}
 h1, .h1, h2, .h2, h3, .h3{
     @extend.font-barlow-semibold;
     color: $primary-color-black;
@@ -134,6 +136,9 @@ h3, .h3{
 .pink{
     color: $primary-color-pink;
 }
+.navy{
+    color: $primary-color-navy;
+}
 a, button{
     display: block;
     text-decoration: none;
@@ -169,12 +174,11 @@ a, button{
         color: $primary-color-navy;
         border-style: dashed;
     }
-}
-.grey-box{
-    padding: 26px 20px;
-    background-color: rgba($color: $primary-color-navy, $alpha: 0.03);
-    border-radius: 7px;
-    position: relative;
+    &.grey-btn{
+        background-color: $primary-color-white;
+        color: $primary-color-navy;
+        border: 1px solid $primary-color-white;
+    }
 }
 .close{
     position: absolute;
@@ -251,6 +255,29 @@ ul{
     padding: 0;
 }
 
+.grey-box{
+    padding: 26px 20px;
+    background-color: rgba($color: $primary-color-navy, $alpha: 0.03);
+    border-radius: 7px;
+    position: relative;
+}
+.pagination{
+    .page-item{
+        .page-link{
+            border: none;
+            color: $primary-color-navy;
+            background-color: transparent;
+            opacity: 0.5;
+        }
+        &.active{
+            .page-link{
+                background-color: transparent;
+                border: transparent;
+                opacity: 1;
+            }
+        }
+    }
+}
 .ar{
     .grey-box{
         .close{
@@ -266,5 +293,10 @@ ul{
         &.add-new-btn{
             padding: 28px 100px;
         }
+    }
+    .w-50-fit{
+        width: 100%;
+        display: block;
+        margin-bottom: 10px;
     }
 }

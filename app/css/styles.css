@@ -37,7 +37,8 @@ Colors
 Styles
 ----------------------------------------------------- */
 .w-50-fit {
-  width: calc(50% - 4px); }
+  width: calc(50% - 4px);
+  display: inline-block; }
 
 .w-10 {
   width: calc( 10% - 3px);
@@ -75,6 +76,9 @@ Styles
 .half-opacity, header .dropdown-toggle::after {
   opacity: .5; }
 
+.no-bg {
+  background-color: transparent !important; }
+
 h1, .h1, h2, .h2, h3, .h3 {
   color: #2B2A35; }
 
@@ -109,6 +113,9 @@ h3, .h3 {
 .pink {
   color: #FF0956; }
 
+.navy {
+  color: #32325D; }
+
 a, button {
   display: block;
   text-decoration: none;
@@ -136,12 +143,10 @@ a, button {
     padding: 34px 112px;
     color: #32325D;
     border-style: dashed; }
-
-.grey-box {
-  padding: 26px 20px;
-  background-color: rgba(50, 50, 93, 0.03);
-  border-radius: 7px;
-  position: relative; }
+  .btn.grey-btn {
+    background-color: #F9F9F9;
+    color: #32325D;
+    border: 1px solid #F9F9F9; }
 
 .close {
   position: absolute;
@@ -210,17 +215,41 @@ ul {
   background-color: transparent;
   padding: 0; }
 
+.grey-box {
+  padding: 26px 20px;
+  background-color: rgba(50, 50, 93, 0.03);
+  border-radius: 7px;
+  position: relative; }
+
+.pagination .page-item .page-link {
+  border: none;
+  color: #32325D;
+  background-color: transparent;
+  opacity: 0.5; }
+
+.pagination .page-item.active .page-link {
+  background-color: transparent;
+  border: transparent;
+  opacity: 1; }
+
 .ar .grey-box .close {
   right: inherit;
   left: 10px; }
 
 @media (max-width: 575.98px) {
   .btn.add-new-btn {
-    padding: 28px 100px; } }
+    padding: 28px 100px; }
+  .w-50-fit {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px; } }
+
+body {
+  min-height: 100%; }
 
 header {
   padding: 20px 0;
-  background-color: rgba(50, 50, 93, 0.04); }
+  background-color: #F9F9F9; }
   header .notification img {
     width: 20px;
     height: 20px;
@@ -263,7 +292,7 @@ header {
 
 footer {
   padding: 14px 0;
-  background-color: rgba(50, 50, 93, 0.04);
+  background-color: #F9F9F9;
   position: relative; }
   footer::before {
     content: '';
@@ -295,6 +324,9 @@ footer {
 
 .fit-height {
   min-height: calc(100vh - 256px); }
+
+.fit-height-listing {
+  min-height: calc(100vh - 152px); }
 
 .content-wrapper {
   position: relative;
@@ -396,6 +428,83 @@ footer {
   top: 50%;
   right: 0; }
 
+.sibebar {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #F9F9F9; }
+  .sibebar .logo-wrapper {
+    width: 105px;
+    height: 105px;
+    background-color: #fff; }
+    .sibebar .logo-wrapper img {
+      width: 24px;
+      height: 48px; }
+  .sibebar .nav-item .nav-link img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain; }
+  .sibebar .nav-item.active .nav-link {
+    opacity: 1; }
+
+.filter .input-group-text {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(50, 50, 93, 0.3);
+  padding: 7.5px; }
+  .filter .input-group-text img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; }
+
+.btn-search {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%); }
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: scroll; }
+
+.table .img-wrapper {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  vertical-align: middle; }
+  .table .img-wrapper img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%); }
+
+.table .row-status .txt .status-color {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #FF0956; }
+
+.table .row-status .txt.disabled {
+  opacity: 50%; }
+  .table .row-status .txt.disabled .status-color {
+    background-color: #32325D; }
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .sibebar .logo-wrapper {
+    width: 70px;
+    height: 70px; }
+    .sibebar .logo-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; } }
+
 @media (max-width: 575.98px) {
   .steps-list {
     height: 60px; }
@@ -408,4 +517,16 @@ footer {
     width: 100%;
     transform: none; }
   .fit-height {
-    height: auto; } }
+    height: auto; }
+  .sibebar .logo-wrapper {
+    width: 30px;
+    height: 30px; }
+    .sibebar .logo-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; }
+  .btn-search {
+    padding: 10px; }
+  .nav-pills .nav-link {
+    padding: 0;
+    text-align: center; } }

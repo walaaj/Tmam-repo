@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="15" height="12" viewBox="0 0 15 12">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        opacity: 0.71;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke: #2b2a35;
+        stroke-dasharray: 2 1;
+      }
+
+      .cls-2, .cls-3, .cls-5 {
+        fill: none;
+      }
+
+      .cls-2 {
+        opacity: 0.75;
+      }
+
+      .cls-3 {
+        opacity: 0.76;
+      }
+
+      .cls-4 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="Group_11520" data-name="Group 11520" transform="translate(-0.063)">
+    <g id="Rectangle_2366" data-name="Rectangle 2366" class="cls-1" transform="translate(0.063)">
+      <rect class="cls-4" width="15" height="12"/>
+      <rect class="cls-5" x="0.5" y="0.5" width="14" height="11"/>
+    </g>
+    <line id="Line_18" data-name="Line 18" class="cls-2" x2="10" transform="translate(2.563 4.5)"/>
+    <line id="Line_19" data-name="Line 19" class="cls-3" x2="2.5" transform="translate(2.563 9.5)"/>
+    <line id="Line_20" data-name="Line 20" class="cls-3" x2="2.5" transform="translate(2.563 9.5)"/>
+  </g>
+</svg>

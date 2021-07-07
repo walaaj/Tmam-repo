@@ -37,7 +37,8 @@ Colors
 Styles
 ----------------------------------------------------- */
 .w-50-fit {
-  width: calc(50% - 4px); }
+  width: calc(50% - 4px);
+  display: inline-block; }
 
 .w-10 {
   width: calc( 10% - 3px);
@@ -75,6 +76,9 @@ Styles
 .half-opacity {
   opacity: .5; }
 
+.no-bg {
+  background-color: transparent !important; }
+
 h1, .h1, h2, .h2, h3, .h3 {
   color: #2B2A35; }
 
@@ -109,6 +113,9 @@ h3, .h3 {
 .pink {
   color: #FF0956; }
 
+.navy {
+  color: #32325D; }
+
 a, button {
   display: block;
   text-decoration: none;
@@ -136,12 +143,10 @@ a, button {
     padding: 34px 112px;
     color: #32325D;
     border-style: dashed; }
-
-.grey-box {
-  padding: 26px 20px;
-  background-color: rgba(50, 50, 93, 0.03);
-  border-radius: 7px;
-  position: relative; }
+  .btn.grey-btn {
+    background-color: #F9F9F9;
+    color: #32325D;
+    border: 1px solid #F9F9F9; }
 
 .close {
   position: absolute;
@@ -210,10 +215,31 @@ ul {
   background-color: transparent;
   padding: 0; }
 
+.grey-box {
+  padding: 26px 20px;
+  background-color: rgba(50, 50, 93, 0.03);
+  border-radius: 7px;
+  position: relative; }
+
+.pagination .page-item .page-link {
+  border: none;
+  color: #32325D;
+  background-color: transparent;
+  opacity: 0.5; }
+
+.pagination .page-item.active .page-link {
+  background-color: transparent;
+  border: transparent;
+  opacity: 1; }
+
 .ar .grey-box .close {
   right: inherit;
   left: 10px; }
 
 @media (max-width: 575.98px) {
   .btn.add-new-btn {
-    padding: 28px 100px; } }
+    padding: 28px 100px; }
+  .w-50-fit {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px; } }
