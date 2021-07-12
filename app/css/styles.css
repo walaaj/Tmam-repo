@@ -211,9 +211,8 @@ ul {
   background-color: #32325D;
   opacity: 0.65; }
 
-.input-group-text, .form-control {
-  background-color: transparent;
-  padding: 0; }
+.input-group-text.grey-box, .form-control.grey-box {
+  background-color: #F9F9F9; }
 
 .grey-box {
   padding: 26px 20px;
@@ -231,6 +230,38 @@ ul {
   background-color: transparent;
   border: transparent;
   opacity: 1; }
+
+.filter-swiper.swiper-container {
+  width: 100%;
+  height: 100%; }
+
+.filter-swiper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  width: auto;
+  height: auto;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center; }
+  .filter-swiper .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+
+.dropdown-menu li {
+  width: 100%; }
 
 .ar .grey-box .close {
   right: inherit;
@@ -495,6 +526,10 @@ footer {
   opacity: 50%; }
   .table .row-status .txt.disabled .status-color {
     background-color: #32325D; }
+
+.input-group-text, .form-control {
+  background-color: #fff;
+  padding: 15px; }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   .sibebar .logo-wrapper {

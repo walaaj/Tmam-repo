@@ -82,33 +82,31 @@
           </div>
         </div>
         <div class="col-10 col-lg-9">
-          <header class="no-bg p-0">
-              <div class="container">
-                  <div class="row justify-content-end border-bottom py-3">
-                      <div class="col-8 text-end">
-                        <a href="javascript:;" class="notification new-notification d-inline-block mx-4 my-3 align-middle">
-                          <img src="images/static/bell.svg" alt="notification">
-                        </a>
-                        <div class="dropdown float-end d-inline-block align-middle h-100">
-                          <button class="dropdown-toggle h-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="images/dynamic/user-img.jpg" alt="user image" class="user-img d-inline-block">
-                            <p class="txt d-none d-md-inline-block text-start mb-0 align-middle mx-2 bold">
-                              Yoko Ono
-                              <span class="half-opacity d-block">yoko.ono@tmam.com</span>
-                            </p>
-                          </button>
-                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                          </ul>
-                        </div>
-                      </div>
+          <div class="container-fluid">
+            <header class="no-bg p-0">
+              <div class="row justify-content-end border-bottom py-3">
+                <div class="col-8 text-end">
+                  <a href="javascript:;" class="notification new-notification d-inline-block mx-4 my-3 align-middle">
+                    <img src="images/static/bell.svg" alt="notification">
+                  </a>
+                  <div class="dropdown float-end d-inline-block align-middle h-100">
+                    <button class="dropdown-toggle h-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <img src="images/dynamic/user-img.jpg" alt="user image" class="user-img d-inline-block">
+                      <p class="txt d-none d-md-inline-block text-start mb-0 align-middle mx-2 bold">
+                        Yoko Ono
+                        <span class="half-opacity d-block">yoko.ono@tmam.com</span>
+                      </p>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
                   </div>
+                </div>
               </div>
-          </header>
-          <div class="py-md-5 d-flex fit-height-listing">
-            <div class="container m-0 p-0">
+            </header>
+            <div class="py-md-5 fit-height-listing">
               <div class="row mb-5">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center">
                   <h1 class="bold">People</h1>
@@ -129,32 +127,28 @@
                       <div class="w-20 align-middle align-items-center p-relative half-opacity">
                         <span class="input-group-text me-1" id="basic-addon1"><img src="images/static/dashboard-border.svg" alt=""></span>
                       </div>
-                      <div class="dropdown w-80 p-relative align-middle">
-                        <label for="dropdownMenuButton1" class="form-label mb-0 w-100 txt half-opacity">Department:</label>
-                        <button class="txt dropdown-toggle no-bg navy p-0" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                          All Departments
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                          <li><a class="dropdown-item" href="#">Action</a></li>
-                          <li><a class="dropdown-item" href="#">Another action</a></li>
-                          <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
+                      <div class="w-80 p-relative align-middle">
+                        <div class="txt half-opacity">Departments:</div>
+                        <select class="form-select txt p-0 no-bg" aria-label="Default select example">
+                          <option selected>Open this select menu</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
                       </div>
                     </div>
                     <div class="input-group w-50-fit">
                       <div class="w-20 align-middle align-items-center p-relative half-opacity">
                         <span class="input-group-text me-1" id="basic-addon1"><img src="images/static/status.svg" alt=""></span>
                       </div>
-                      <div class="dropdown w-80 p-relative align-middle">
-                        <label for="dropdownMenuButton2" class="form-label mb-0 w-100 txt half-opacity">Department:</label>
-                        <button class="txt dropdown-toggle no-bg navy p-0" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                          All Statuses
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                          <li><a class="dropdown-item" href="#">Action</a></li>
-                          <li><a class="dropdown-item" href="#">Another action</a></li>
-                          <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
+                      <div class="w-80 p-relative align-middle">
+                        <div class="txt half-opacity">Stasuses:</div>
+                        <select class="form-select txt p-0 no-bg" aria-label="Default select example">
+                          <option selected>Open this select menu</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
                       </div>
                     </div>
                   </div>
@@ -285,7 +279,7 @@
                     <ul class="pagination float-end">
                       <li class="page-item">
                         <a class="page-link" href="#" aria-label="Previous">
-                          <span aria-hidden="true">&laquo;</span>
+                          <span aria-hidden="true">«</span>
                         </a>
                       </li>
                       <li class="page-item active"><a class="page-link" href="#">1</a></li>
@@ -293,7 +287,7 @@
                       <li class="page-item"><a class="page-link" href="#">3</a></li>
                       <li class="page-item">
                         <a class="page-link" href="#" aria-label="Next">
-                          <span aria-hidden="true">&raquo;</span>
+                          <span aria-hidden="true">»</span>
                         </a>
                       </li>
                     </ul>

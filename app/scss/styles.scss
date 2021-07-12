@@ -352,6 +352,11 @@ footer{
         }
     }
 }
+
+.input-group-text, .form-control {
+    background-color: #fff;
+    padding: 15px; 
+}
 // Comon mobile & Tablet
 @media (min-width: 100px) and (max-width: 1000px){
 }
