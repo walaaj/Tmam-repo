@@ -121,7 +121,6 @@ a, button {
   text-decoration: none;
   color: #32325D;
   opacity: 1;
-  line-height: 100%;
   box-shadow: none !important; }
   a:hover, button:hover {
     opacity: 0.5;
@@ -147,6 +146,12 @@ a, button {
     background-color: #F9F9F9;
     color: #32325D;
     border: 1px solid #F9F9F9; }
+
+.breadcrumb-item + .breadcrumb-item::before {
+  padding: 0 1rem; }
+
+.breadcrumb-item.active {
+  color: #FF0956; }
 
 .close {
   position: absolute;
@@ -213,6 +218,29 @@ ul {
 
 .input-group-text.grey-box, .form-control.grey-box {
   background-color: #F9F9F9; }
+
+.form-check-input[type=radio] {
+  border-radius: 4px;
+  position: relative; }
+  .form-check-input[type=radio]::after {
+    content: '';
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    top: 2px;
+    left: 2px;
+    position: absolute;
+    background-color: #F9F9F9;
+    border-radius: 2px; }
+
+.form-check-input:checked {
+  background-color: #F9F9F9;
+  border-color: #FF0956;
+  background-image: none; }
+  .form-check-input:checked:after {
+    background-color: #FF0956; }
+
+.form-check-input[type=checkbox]:checked {
+  background-color: #FF0956; }
 
 .grey-box {
   padding: 26px 20px;
@@ -526,6 +554,18 @@ footer {
   opacity: 50%; }
   .table .row-status .txt.disabled .status-color {
     background-color: #32325D; }
+
+.table th {
+  position: relative; }
+  .table th::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 1px;
+    height: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(50, 50, 93, 0.2); }
 
 .input-group-text, .form-control {
   background-color: #fff;

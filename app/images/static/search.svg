@@ -1,17 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="17.429" height="17.811" viewBox="0 0 17.429 17.811">
+<svg xmlns="http://www.w3.org/2000/svg" width="13.201" height="13.49" viewBox="0 0 13.201 13.49">
   <defs>
     <style>
       .cls-1 {
         fill: none;
-        stroke: #fff;
+        stroke: #2b2a35;
         stroke-linecap: round;
         stroke-linejoin: round;
-        stroke-width: 1.5px;
+        stroke-width: 1.2px;
       }
     </style>
   </defs>
-  <g id="search-2036105" transform="translate(-0.028 -0.028)">
-    <circle id="Ellipse_2518" data-name="Ellipse 2518" class="cls-1" cx="7.482" cy="7.482" r="7.482" transform="translate(0.778 0.778)"/>
-    <line id="Line_192" data-name="Line 192" class="cls-1" x2="2.933" y2="2.926" transform="translate(13.463 13.852)"/>
-  </g>
+  <path id="Union_56" data-name="Union 56" class="cls-1" d="M19056.742,12343.044l2.256,2.249Zm-9.744-4.3a5.747,5.747,0,1,1,5.748,5.749A5.747,5.747,0,0,1,19047,12338.748Z" transform="translate(-19046.398 -12332.402)"/>
 </svg>

@@ -145,7 +145,7 @@ a, button{
     color: $primary-color-navy;
     opacity: 1;
     //@extend.cubicTransition;
-    line-height: 100%;
+    //line-height: 100%;
     box-shadow: none !important;
     &:hover{
         opacity: 0.5;
@@ -178,6 +178,14 @@ a, button{
         background-color: $primary-color-white;
         color: $primary-color-navy;
         border: 1px solid $primary-color-white;
+    }
+}
+.breadcrumb-item+.breadcrumb-item::before{
+    padding: 0 1rem;
+}
+.breadcrumb-item{
+    &.active{
+        color: $primary-color-pink;
     }
 }
 .close{
@@ -257,7 +265,32 @@ ul{
         background-color: $primary-color-white;
     }
 }
+.form-check-input[type=radio] {
+    border-radius: 4px;
+    position: relative;
+    &::after{
+        content: '';
+        width: calc(100% - 4px);
+        height: calc(100% - 4px);
+        top: 2px;
+        left: 2px;
+        position: absolute;
+        background-color: $primary-color-white;
+        border-radius: 2px;
+    }
 
+}
+.form-check-input:checked {
+    background-color: $primary-color-white;
+    border-color: $primary-color-pink;
+    background-image: none;
+    &:after{
+        background-color: $primary-color-pink;
+    }
+}
+.form-check-input[type=checkbox]:checked{
+    background-color: $primary-color-pink;
+}
 .grey-box{
     padding: 26px 20px;
     background-color: rgba($color: $primary-color-navy, $alpha: 0.03);

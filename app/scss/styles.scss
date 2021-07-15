@@ -351,6 +351,19 @@ footer{
             }
         }
     }
+    th{
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 1px;
+            height: 50%;
+            transform: translateY(-50%);
+            background-color: rgba($color: $primary-color-navy, $alpha: .2);
+        }
+    }
 }
 
 .input-group-text, .form-control {

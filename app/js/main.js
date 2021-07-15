@@ -18,6 +18,9 @@ jQuery(function($){
                 $('#show_hide_password .bi-eye-slash-fill').removeClass( "d-none" );
             }
         });
+
+        $('input[name="dates"]').daterangepicker();
+        
     });
     
     ///////////////////////////////////////////////////////////////   END DOCUMENT READY  ///////////////////////////////////////////////////////////////
