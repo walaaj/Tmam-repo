@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="12px" viewBox="0 0 8 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>arrow-right</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="arrow-right" transform="translate(3.545500, 6.000000) scale(-1, 1) translate(-3.545500, -6.000000) translate(-0.000000, 0.000000)" fill="#2B2A35" fill-rule="nonzero">
+            <polygon id="Path_12008" transform="translate(3.545500, 6.000000) rotate(90.000000) translate(-3.545500, -6.000000) " points="3.5455 2.4545 -2.4545 8.4545 -1.3635 9.5455 3.5455 4.6365 8.4545 9.5455 9.5455 8.4545"></polygon>
+        </g>
+    </g>
+</svg>

@@ -2,7 +2,7 @@
 Fonts
 ----------------------------------------------------- */
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Dosis:wght@400;500;700&display=swap");
-.font-dosis-regular, header .dropdown-toggle .txt span {
+.font-dosis-regular, header .dropdown-toggle .txt span, header .dropdown-toggle .dataTables_info span, header .dropdown-toggle .dataTables_paginate span {
   font-family: 'Dosis', sans-serif;
   font-weight: 400; }
 
@@ -14,19 +14,19 @@ Fonts
   font-family: 'Dosis', sans-serif;
   font-weight: 700; }
 
-.font-barlow-regular, .txt, ul li {
+.font-barlow-regular, .txt, .dataTables_info, .dataTables_paginate, .regular, ul li {
   font-family: 'Barlow', sans-serif;
   font-weight: 400; }
 
-.font-barlow-medium, .txt.medium, .btn {
+.font-barlow-medium, .txt.medium, .dataTables_info, .dataTables_paginate, .btn {
   font-family: 'Barlow', sans-serif;
   font-weight: 500; }
 
-.font-barlow-semibold, h1, .h1, h2, .h2, h3, .h3, .steps-list li .number {
+.font-barlow-semibold, h1, .h1, h2, .h2, h3, .h3, .txt.semi-bold, .semi-bold.dataTables_info, .semi-bold.dataTables_paginate, .steps-list li .number {
   font-family: 'Barlow', sans-serif;
   font-weight: 600; }
 
-.font-barlow-bold, h1.bold, .h1.bold, h2.bold, .h2.bold, h3.bold, .h3.bold, .txt.bold {
+.font-barlow-bold, h1.bold, .h1.bold, h2.bold, .h2.bold, h3.bold, .h3.bold, .txt.bold, .bold.dataTables_info, .bold.dataTables_paginate {
   font-family: 'Barlow', sans-serif;
   font-weight: 700; }
 
@@ -73,7 +73,7 @@ Styles
   -moz-transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);
   -o-transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1); }
 
-.half-opacity, header .dropdown-toggle::after {
+.half-opacity, header .dropdown-toggle::after, .card-detail-tabs li a {
   opacity: .5; }
 
 .no-bg {
@@ -91,14 +91,16 @@ h2, .h2 {
 h3, .h3 {
   font-size: 16px; }
 
-.txt {
+.txt, .dataTables_info, .dataTables_paginate {
   font-size: 14px;
   color: #32325D;
   margin-bottom: 0;
   line-height: 100%; }
-  .txt.bigger {
+  .txt.bigger, .bigger.dataTables_info, .bigger.dataTables_paginate {
     font-size: 16px; }
-  .txt.small {
+  .txt.big, .big.dataTables_info, .big.dataTables_paginate {
+    font-size: 18px; }
+  .txt.small, .small.dataTables_info, .small.dataTables_paginate {
     font-size: 12px; }
 
 .uppercase {
@@ -110,11 +112,26 @@ h3, .h3 {
 .white {
   color: #F9F9F9; }
 
+.bgWhite {
+  background-color: #F9F9F9; }
+
+.bgLowWhite {
+  background-color: #F6F6F6; }
+
 .pink {
   color: #FF0956; }
 
 .navy {
   color: #32325D; }
+
+.bgNavy {
+  background-color: #32325D; }
+
+.bgLowNavy {
+  background-color: #EEEEEE; }
+
+.br-commun {
+  border-radius: 14px; }
 
 a, button {
   display: block;
@@ -128,7 +145,7 @@ a, button {
 
 .btn {
   background-color: #FF0956;
-  padding: 10px 40px;
+  padding: 15px 40px;
   color: #F9F9F9;
   border: 1px solid #FF0956;
   font-size: 14px;
@@ -148,7 +165,8 @@ a, button {
     border: 1px solid #F9F9F9; }
 
 .breadcrumb-item + .breadcrumb-item::before {
-  padding: 0 1rem; }
+  padding: 0 1rem;
+  content: url("../images/static/arrow-right.svg"); }
 
 .breadcrumb-item.active {
   color: #FF0956; }
@@ -291,6 +309,17 @@ ul {
 .dropdown-menu li {
   width: 100%; }
 
+.dropdown-toggle::after {
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
+  content: url("../images/static/arrow-down.svg");
+  float: right; }
+
+.form-check-input:hover, .form-check-label:hover {
+  cursor: pointer; }
+
 .ar .grey-box .close {
   right: inherit;
   left: 10px; }
@@ -327,7 +356,7 @@ header {
       box-shadow: 0px 2px 6px 0px #FF0956; }
   header .dropdown-toggle {
     opacity: 1; }
-    header .dropdown-toggle .txt {
+    header .dropdown-toggle .txt, header .dropdown-toggle .dataTables_info, header .dropdown-toggle .dataTables_paginate {
       line-height: 100%; }
     header .dropdown-toggle .user-img {
       width: 36px;
@@ -337,12 +366,12 @@ header {
       object-fit: cover;
       vertical-align: middle; }
     header .dropdown-toggle::after {
-      background-image: url("../images/static/arrow-down.svg");
       width: 10px;
       height: 8px;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
+      /* background-image: url("../images/static/arrow-down.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain; */
       border: none; }
     header .dropdown-toggle.show:after {
       transform: rotate(180deg); }
@@ -499,13 +528,29 @@ footer {
     height: 105px;
     background-color: #fff; }
     .sibebar .logo-wrapper img {
-      width: 24px;
-      height: 48px; }
-  .sibebar .nav-item .nav-link img {
-    width: 16px;
-    height: 16px;
-    object-fit: contain; }
-  .sibebar .nav-item.active .nav-link {
+      width: 36px;
+      height: 60px; }
+  .sibebar .nav-item {
+    position: relative; }
+    .sibebar .nav-item .nav-link img {
+      width: 16px;
+      height: 16px;
+      object-fit: contain; }
+    .sibebar .nav-item:before {
+      content: '';
+      width: 6px;
+      height: 100%;
+      background-color: #FF0956;
+      position: absolute;
+      top: 0;
+      left: -3px;
+      border-radius: 3px;
+      display: none; }
+    .sibebar .nav-item.active .nav-link {
+      opacity: 1; }
+    .sibebar .nav-item.active::before {
+      display: block; }
+  .sibebar .nav-link:hover {
     opacity: 1; }
 
 .filter .input-group-text {
@@ -525,8 +570,7 @@ footer {
   transform: translateY(-50%); }
 
 .table-wrapper {
-  width: 100%;
-  overflow-x: scroll; }
+  width: 100%; }
 
 .table .img-wrapper {
   width: 25px;
@@ -543,21 +587,21 @@ footer {
     height: 100%;
     transform: translate(-50%, -50%); }
 
-.table .row-status .txt .status-color {
+.table .row-status .txt .status-color, .table .row-status .dataTables_info .status-color, .table .row-status .dataTables_paginate .status-color {
   width: 7px;
   height: 7px;
   border-radius: 50%;
   overflow: hidden;
   background-color: #FF0956; }
 
-.table .row-status .txt.disabled {
+.table .row-status .txt.disabled, .table .row-status .disabled.dataTables_info, .table .row-status .disabled.dataTables_paginate {
   opacity: 50%; }
-  .table .row-status .txt.disabled .status-color {
+  .table .row-status .txt.disabled .status-color, .table .row-status .disabled.dataTables_info .status-color, .table .row-status .disabled.dataTables_paginate .status-color {
     background-color: #32325D; }
 
 .table th {
   position: relative; }
-  .table th::after {
+  .table th::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -566,18 +610,118 @@ footer {
     height: 50%;
     transform: translateY(-50%);
     background-color: rgba(50, 50, 93, 0.2); }
+  .table th:last-child:before {
+    display: none; }
+
+.table tbody tr[role="row"]:hover, .table tbody tr[role="row"].active {
+  background-color: rgba(50, 50, 93, 0.1); }
+
+.dataTables_length, .dataTables_filter {
+  display: none; }
+
+.dataTables_info, .dataTables_paginate {
+  display: inline-block;
+  padding-top: 20px !important; }
+
+.dataTables_paginate {
+  float: right; }
+  .dataTables_paginate span .paginate_button {
+    margin: 0 20px;
+    opacity: .5; }
+    .dataTables_paginate span .paginate_button.current {
+      opacity: 1; }
+
+table.dataTable {
+  border-collapse: collapse !important; }
+  table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:after, table.dataTable thead .sorting_desc:after {
+    content: url("../images/static/sorting.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; }
+
+.paginate_button {
+  display: inline-block;
+  opacity: 1; }
+  .paginate_button.disabled {
+    opacity: .5; }
+
+.table-transactions .dataTables_info, .table-transactions .dataTables_paginate {
+  display: none; }
 
 .input-group-text, .form-control {
   background-color: #fff;
   padding: 15px; }
 
+.card-detail-tabs {
+  display: flex; }
+  .card-detail-tabs li {
+    display: flex; }
+
+.transformBtn {
+  transform: translateY(-7px); }
+
+.card-detail-tabs {
+  border-bottom: 2px solid rgba(50, 50, 93, 0.58); }
+  .card-detail-tabs li {
+    position: relative; }
+    .card-detail-tabs li:after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      height: 4px;
+      width: 100%;
+      left: 0;
+      background-color: transparent;
+      border-radius: 3px; }
+    .card-detail-tabs li.active:after {
+      background-color: #FF0956; }
+    .card-detail-tabs li.active a {
+      color: #FF0956;
+      opacity: 1; }
+
+.rect {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  background-color: #FF0956; }
+
+.morris-hover {
+  position: absolute;
+  z-index: 1000; }
+
+.morris-hover.morris-default-style {
+  border-radius: 10px;
+  padding: 6px;
+  color: #666;
+  background: rgba(255, 255, 255, 0.8);
+  border: solid 2px rgba(230, 230, 230, 0.8);
+  font-family: sans-serif;
+  font-size: 12px;
+  text-align: center; }
+
+.morris-hover.morris-default-style .morris-hover-row-label {
+  font-weight: bold;
+  margin: 0.25em 0; }
+
+.morris-hover.morris-default-style .morris-hover-point {
+  white-space: nowrap;
+  margin: 0.1em 0; }
+
+.logo-patern {
+  position: absolute;
+  bottom: -15%;
+  left: 0; }
+
 @media (min-width: 768px) and (max-width: 991.98px) {
   .sibebar .logo-wrapper {
     width: 70px;
-    height: 70px; }
+    height: 70px;
+    position: absolute;
+    top: 10px;
+    left: 140px; }
     .sibebar .logo-wrapper img {
-      width: 100%;
-      height: 100%;
+      width: 80%;
+      height: 80%;
       object-fit: contain; } }
 
 @media (max-width: 575.98px) {
@@ -594,14 +738,21 @@ footer {
   .fit-height {
     height: auto; }
   .sibebar .logo-wrapper {
-    width: 30px;
-    height: 30px; }
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 22px;
+    left: 52px; }
     .sibebar .logo-wrapper img {
-      width: 100%;
-      height: 100%;
+      width: 80%;
+      height: 80%;
       object-fit: contain; }
   .btn-search {
     padding: 10px; }
   .nav-pills .nav-link {
     padding: 0;
-    text-align: center; } }
+    text-align: center; }
+  .card-detail-tabs {
+    display: block; }
+    .card-detail-tabs li {
+      display: block; } }

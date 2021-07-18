@@ -18,14 +18,15 @@
   <link href="css/responsive.css" rel="stylesheet">
   
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
-  <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.1.0/js/dataTables.responsive.min.js"></script>
-
-  <!-- JavaScript Bundle with Popper -->
+    <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.1.0/js/dataTables.responsive.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
 
   
 </head>
@@ -117,27 +118,29 @@
                 </div>
               </div>
             </header>
-            <div class="py-md-5 fit-height-listing">
-              <div class="row my-3 mb-md-5">
-                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center">
-                  <h1 class="bold">Cards</h1>
-                  <div class="btn-toolbar mb-2 mb-md-0">
-                    <div class="btn-group me-2">
-                      <a href="javascript:;" class=" btn my-auto">
-                        <img src="images/static/plus-white.svg" alt="" class="d-inline-block">
-                        <p class="txt white d-none d-md-inline-block mx-2">New Card</p>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <nav  aria-label="breadcrumb" class="py-5">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item txt bigger p-0 medium"><a href="#">Cards</a></li>
+                <li class="breadcrumb-item txt bigger p-0 medium active" aria-current="page">Card  * 4796</li>
+              </ol>
+            </nav>
+            <ul class="card-detail-tabs mb-5">
+              <li class="mx-auto"><a href="javascript:;" class="p-3 txt bigger semi-bold uppercase">Overview</a></li>
+              <li class="mx-auto"><a href="javascript:;" class="p-3 txt bigger semi-bold uppercase">Card limits</a></li>
+              <li class="mx-auto"><a href="javascript:;" class="p-3 txt bigger semi-bold uppercase">Card Control</a></li>
+              <li class="mx-auto"><a href="javascript:;" class="p-3 txt bigger semi-bold uppercase">Expenses</a></li>
+              <li class="mx-auto active"><a href="javascript:;" class="p-3 txt bigger semi-bold uppercase">Transfers</a></li>
+            </ul>
+            
+
+            <div class="py-md-5">
               <div class="row mb-5">
                 <div class="col-lg-2 mb-2 mb-lg-0 pe-lg-0">
                   <div class="grey-box filter h-100 py-3">
-                    <p class="txt half-opacity text-start small">Select Department</p>
+                    <p class="txt half-opacity text-start small">From</p>
                     <div class="dropdown p-relative align-middle">
                       <button class="txt medium dropdown-toggle no-bg navy px-0 py-2 w-100 text-start" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                        All Departments
+                        All Transfers
                       </button>
                       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                         <li><a class="dropdown-item" href="#">Action</a></li>
@@ -149,10 +152,10 @@
                 </div>
                 <div class="col-lg-2 mb-2 mb-lg-0 pe-lg-0">
                   <div class="grey-box filter h-100 py-3">
-                    <p class="txt half-opacity text-start small">Filter by Card holder</p>
+                    <p class="txt half-opacity text-start small">To</p>
                     <div class="dropdown p-relative align-middle">
                       <button class="txt medium dropdown-toggle no-bg navy px-0 py-2 w-100 text-start" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                        All Departments
+                        All Transfers
                       </button>
                       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
                         <li><a class="dropdown-item" href="#">Action</a></li>
@@ -164,7 +167,7 @@
                 </div>
                 <div class="col-lg-3 mb-2 mb-lg-0 pe-lg-0">
                   <div class="grey-box filter h-100 py-3 calendar">
-                    <p class="txt half-opacity text-start small">Filter by Card holder</p>
+                    <p class="txt half-opacity text-start small">Select Date Range</p>
                     <div class="input-group w-100">
                       <input type="text" name="daterange" value="01/01/2018 - 01/15/2018"  class="no-bg navy txt medium border-0 w-80" aria-label="date" aria-describedby="basic-addon2"/>
                       <span class="input-group-text no-bg flo" id="basic-addon2"><img src="images/static/calendar-pink.svg" alt=""></span>
@@ -186,33 +189,30 @@
                   <table class="table align-middle">
                     <thead>
                       <tr>
-                        <th scope="col" class="row-type"><p class="txt half-opacity p-2 small">Type</p></th>
-                        <th scope="col" class="row-holder"><p class="txt half-opacity p-2 small">Card Holder</p></th>
-                        <th scope="col" class="row-card-num"><p class="txt half-opacity p-2 small">Card Number</p></th>
-                        <th scope="col" class="row-status"><p class="txt half-opacity p-2 small">Status</p></th>
-                        <th scope="col" class="row-fund"><p class="txt half-opacity p-2 small">Available Funds</p></th>
-                        <th scope="col" class="row-charged"><p class="txt half-opacity p-2 small">Last Charged on</p></th>
-                        <th scope="col" class="row-usage"><p class="txt half-opacity p-2 small">Usage</p></th>
+                        <th scope="col" class="row-from"><p class="txt half-opacity p-2 small">From</p></th>
+                        <th scope="col" class="row-to"><p class="txt half-opacity p-2 small">To</p></th>
+                        <th scope="col" class="row-amount"><p class="txt half-opacity p-2 small">Amount</p></th>
+                        <th scope="col" class="row-balance"><p class="txt half-opacity p-2 small">New Balance</p></th>
+                        <th scope="col" class="row-date-range"><p class="txt half-opacity p-2 small">Date</p></th>
+                        <th scope="col" class="row-budget"><p class="txt half-opacity p-2 small"></p></th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr class="">
-                        <td class="row-type"><p class="txt px-2 py-3">Virtual</p></td>
-                        <td class="row-holder"><p class="txt px-2 py-3">Tom Baely</p></td>
-                        <td class="row-card-num"><p class="txt px-2 py-3">* 4334</p></td>
-                        <td class="row-status"><p class="txt px-2 py-3 disabled"><span class="d-inline-block align-middle me-1 status-color"></span> Suspended</p></td>
-                        <td class="row-fund"><p class="txt px-2 py-3">$120,542.00</p></td>
-                        <td class="row-charged"><p class="txt px-2 py-3">Jan 06, 2021</p></td>
-                        <td class="row-usage"><p class="txt px-2 py-3">One-Time</p></td>
+                        <td class="row-from"><p class="txt px-2 py-3">Maseeh Mohamad</p></td>
+                        <td class="row-to"><p class="txt px-2 py-3">**** **** **** 4796</p></td>
+                        <td class="row-amount"><p class="txt px-2 py-3">$ 14.99</p></td>
+                        <td class="row-balance"><p class="txt px-2 py-3">$ 6,756.97</p></td>
+                        <td class="row-date-range"><p class="txt px-2 py-3">11:43 AM    -    24 June, 2021</p></td>
+                        <td class="row-budget"><p class="txt px-2 py-3"></p></td>
                       </tr>
                       <tr>
-                        <td class="row-type"><p class="txt px-2 py-3">Virtual</p></td>
-                        <td class="row-holder"><p class="txt px-2 py-3">Tom Baely</p></td>
-                        <td class="row-card-num"><p class="txt px-2 py-3">* 4334</p></td>
-                        <td class="row-status"><p class="txt px-2 py-3"><span class="d-inline-block align-middle me-1 status-color"></span> Active</p></td>
-                        <td class="row-fund"><p class="txt px-2 py-3">$120,542.00</p></td>
-                        <td class="row-charged"><p class="txt px-2 py-3">Jan 06, 2021</p></td>
-                        <td class="row-usage"><p class="txt px-2 py-3">One-Time</p></td>
+                        <td class="row-from"><p class="txt px-2 py-3">Maseeh Mohamad</p></td>
+                        <td class="row-to"><p class="txt px-2 py-3">**** **** **** 4796</p></td>
+                        <td class="row-amount"><p class="txt px-2 py-3">$ 14.99</p></td>
+                        <td class="row-balance"><p class="txt px-2 py-3">$ 6,756.97</p></td>
+                        <td class="row-date-range"><p class="txt px-2 py-3">11:43 AM    -    24 June, 2021</p></td>
+                        <td class="row-budget"><p class="txt px-2 py-3"></p></td>
                       </tr>
                     </tbody>
                   </table>
@@ -249,13 +249,13 @@
     <div class="modal fade" id="addAdmin" tabindex="-1" aria-labelledby="addAdminLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-          <div class="row mb-4">
+          <div class="row mb-4 pb-4">
             <div class="col-12 text-center">
               <img src="images/static/dashboard-border.svg" alt="admin icon" class="icon-blue my-auto mx-auto mb-md-2">
               <h3>Marketing  Department Admins</h3>
             </div>
           </div>
-          <div class="row mb-4">
+          <div class="row mb-4 pb-4">
             <p class="txt mb-3 bold">Edit  Admin:</p>
             <div class="col-12 mb-3">
               <div class="grey-box text-start">
@@ -305,7 +305,6 @@
         </div>
       </div>
     </div>
-
     <script>
       $(function() {
         $('input[name="daterange"]').daterangepicker({
@@ -315,23 +314,22 @@
         });
       });
       </script>
-
       <script>
-          $(document).ready(function() {
-            $('.table').DataTable({
-            //disable sorting on last column
-            "columnDefs": [
-              { "orderable": false, "targets": 5 }
-            ],
-            language: {
-              //customize pagination prev and next buttons: use arrows instead of words
-              'paginate': {
-                'previous': '<span><img src="images/static/arrow-left.svg"></span>',
-                'next': '<span><img src="images/static/arrow-right.svg"></span>'
-              }
+        $(document).ready(function() {
+          $('.table').DataTable({
+          //disable sorting on last column
+          "columnDefs": [
+            { "orderable": false, "targets": 5 }
+          ],
+          language: {
+            //customize pagination prev and next buttons: use arrows instead of words
+            'paginate': {
+              'previous': '<span><img src="images/static/arrow-left.svg"></span>',
+              'next': '<span><img src="images/static/arrow-right.svg"></span>'
             }
-          }) 
-        });
+          }
+        }) 
+      });
       </script>
 </body>
 </html>

@@ -14,7 +14,7 @@ Fonts
   font-family: 'Dosis', sans-serif;
   font-weight: 700; }
 
-.font-barlow-regular, .txt, ul li {
+.font-barlow-regular, .txt, .regular, ul li {
   font-family: 'Barlow', sans-serif;
   font-weight: 400; }
 
@@ -22,7 +22,7 @@ Fonts
   font-family: 'Barlow', sans-serif;
   font-weight: 500; }
 
-.font-barlow-semibold, h1, .h1, h2, .h2, h3, .h3 {
+.font-barlow-semibold, h1, .h1, h2, .h2, h3, .h3, .txt.semi-bold {
   font-family: 'Barlow', sans-serif;
   font-weight: 600; }
 
@@ -98,6 +98,8 @@ h3, .h3 {
   line-height: 100%; }
   .txt.bigger {
     font-size: 16px; }
+  .txt.big {
+    font-size: 18px; }
   .txt.small {
     font-size: 12px; }
 
@@ -110,11 +112,26 @@ h3, .h3 {
 .white {
   color: #F9F9F9; }
 
+.bgWhite {
+  background-color: #F9F9F9; }
+
+.bgLowWhite {
+  background-color: #F6F6F6; }
+
 .pink {
   color: #FF0956; }
 
 .navy {
   color: #32325D; }
+
+.bgNavy {
+  background-color: #32325D; }
+
+.bgLowNavy {
+  background-color: #EEEEEE; }
+
+.br-commun {
+  border-radius: 14px; }
 
 a, button {
   display: block;
@@ -128,7 +145,7 @@ a, button {
 
 .btn {
   background-color: #FF0956;
-  padding: 10px 40px;
+  padding: 15px 40px;
   color: #F9F9F9;
   border: 1px solid #FF0956;
   font-size: 14px;
@@ -148,7 +165,8 @@ a, button {
     border: 1px solid #F9F9F9; }
 
 .breadcrumb-item + .breadcrumb-item::before {
-  padding: 0 1rem; }
+  padding: 0 1rem;
+  content: url("../images/static/arrow-right.svg"); }
 
 .breadcrumb-item.active {
   color: #FF0956; }
@@ -290,6 +308,17 @@ ul {
 
 .dropdown-menu li {
   width: 100%; }
+
+.dropdown-toggle::after {
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
+  content: url("../images/static/arrow-down.svg");
+  float: right; }
+
+.form-check-input:hover, .form-check-label:hover {
+  cursor: pointer; }
 
 .ar .grey-box .close {
   right: inherit;

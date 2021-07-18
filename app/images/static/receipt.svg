@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="17.2" height="18.875" viewBox="0 0 17.2 18.875">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #2b2a35;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.2px;
+      }
+
+      .cls-2 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="document-2036117" transform="translate(0.6 0.6)">
+    <line id="Line_50" data-name="Line 50" class="cls-1" x1="7.22" transform="translate(4.411 12.936)"/>
+    <line id="Line_51" data-name="Line 51" class="cls-1" x1="7.22" transform="translate(4.411 8.917)"/>
+    <line id="Line_52" data-name="Line 52" class="cls-1" x1="2.755" transform="translate(4.519 4.906)"/>
+    <path id="Path_11889" data-name="Path 11889" class="cls-2" d="M12.423.75l-7.382,0A4.081,4.081,0,0,0,.751,5.173V14a4.085,4.085,0,0,0,4.326,4.423l7.382,0A4.082,4.082,0,0,0,16.751,14V5.173A4.085,4.085,0,0,0,12.423.75Z" transform="translate(-0.751 -0.75)"/>
+  </g>
+</svg>

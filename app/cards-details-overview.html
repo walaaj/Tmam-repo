@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="keywords" content="">
+  <meta name="description" content="" />
+  <title>Tmam</title>
+  <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+  <!-- CSS only -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+  <link href="css/styles.css" rel="stylesheet">
+  <link href="css/responsive.css" rel="stylesheet">
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.1.0/js/dataTables.responsive.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+
+  
+</head>
+
+<body>
+    <div class="container-fluid ms-0 ps-0">
+      <div class="row">
+        <div class="col-2">
+          <div class="py-5 sibebar">
+            <div class="d-flex flex-column flex-shrink-0">
+              <a href="/" class="d-flex mx-auto logo-wrapper mb-3">
+                <img src="images/static/logo-colored.svg" alt="Logo Colored">
+              </a>
+              <ul class="nav nav-pills flex-column mb-auto">
+                <li class="nav-item my-3 px-md-4">
+                  <a href="#" class="nav-link half-opacity">
+                    <img src="images/static/dashboard-blue.svg" alt="" class="d-inline-block">
+                    <p class="txt semi-bold d-none d-lg-inline-block mx-3">Dashboard</p>
+                  </a>
+                </li>
+                <li class="nav-item my-3 px-md-4">
+                  <a href="#" class="nav-link half-opacity">
+                    <img src="images/static/budget.svg" alt="" class="d-inline-block">
+                    <p class="txt semi-bold d-none d-lg-inline-block mx-3">Budget</p>
+                  </a>
+                </li>
+                <li class="nav-item my-3 px-md-4 active">
+                  <a href="#" class="nav-link half-opacity">
+                    <img src="images/static/cards.svg" alt="" class="d-inline-block">
+                    <p class="txt semi-bold d-none d-lg-inline-block mx-3">Cards</p>
+                  </a>
+                </li>
+                <li class="nav-item my-3 px-md-4">
+                  <a href="#" class="nav-link half-opacity">
+                    <img src="images/static/people.svg" alt="" class="d-inline-block">
+                    <p class="txt semi-bold d-none d-lg-inline-block mx-3">People</p>
+                  </a>
+                </li>
+                <li class="nav-item my-3 px-md-4">
+                  <a href="#" class="nav-link half-opacity">
+                    <img src="images/static/expenses.svg" alt="" class="d-inline-block">
+                    <p class="txt semi-bold d-none d-lg-inline-block mx-3">Expenses</p>
+                  </a>
+                </li>
+                <li class="nav-item my-3 px-md-4">
+                  <a href="#" class="nav-link half-opacity">
+                    <img src="images/static/reports.svg" alt="" class="d-inline-block">
+                    <p class="txt semi-bold d-none d-lg-inline-block mx-3">Report</p>
+                  </a>
+                </li>
+                <li class="nav-item my-3 px-md-4">
+                  <a href="#" class="nav-link half-opacity">
+                    <img src="images/static/acconting.svg" alt="" class="d-inline-block">
+                    <p class="txt semi-bold d-none d-lg-inline-block mx-3">Accounting </p>
+                  </a>
+                </li>
+                <li class="nav-item my-3 px-md-4">
+                  <a href="#" class="nav-link half-opacity">
+                    <img src="images/static/settings.svg" alt="" class="d-inline-block">
+                    <p class="txt semi-bold d-none d-lg-inline-block mx-3">Settings </p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-10">
+          <div class="container-fluid p-0">
+            <header class="no-bg p-0">
+              <div class="row justify-content-end border-bottom py-3">
+                <div class="col-8 text-end">
+                  <a href="javascript:;" class="notification new-notification d-inline-block mx-4 my-3 align-middle">
+                    <img src="images/static/bell.svg" alt="notification">
+                  </a>
+                  <div class="dropdown float-end d-inline-block align-middle h-100">
+                    <button class="dropdown-toggle h-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <img src="images/dynamic/user-img.jpg" alt="user image" class="user-img d-inline-block">
+                      <p class="txt d-none d-md-inline-block text-start mb-0 align-middle mx-2 bold">
+                        Yoko Ono
+                        <span class="half-opacity d-block">yoko.ono@tmam.com</span>
+                      </p>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </header>
+            <nav  aria-label="breadcrumb" class="py-5">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item txt bigger p-0 medium"><a href="#">Cards</a></li>
+                <li class="breadcrumb-item txt bigger p-0 medium active" aria-current="page">Card  * 4796</li>
+              </ol>
+            </nav>
+            <ul class="card-detail-tabs mb-5">
+              <li class="mx-auto active"><a href="javascript:;" class="p-3 txt bigger semi-bold uppercase">Overview</a></li>
+              <li class="mx-auto"><a href="javascript:;" class="p-3 txt bigger semi-bold uppercase">Card limits</a></li>
+              <li class="mx-auto"><a href="javascript:;" class="p-3 txt bigger semi-bold uppercase">Card Control</a></li>
+              <li class="mx-auto"><a href="javascript:;" class="p-3 txt bigger semi-bold uppercase">Expenses</a></li>
+              <li class="mx-auto"><a href="javascript:;" class="p-3 txt bigger semi-bold uppercase">Transfers</a></li>
+            </ul>
+            <div class="p-4 bgWhite br-commun mb-5">
+              <div class="row mb-3">
+                <div class="col-auto order-2 order-md-1">
+                  <p class="txt p-2">Spent</p>
+                </div>
+                <div class="col-auto ms-md-auto order-1 order-md-2 mb-2 mb-md-0">
+                  <div class="bar-legend d-inline me-2">
+                    <div class="rect d-inline-block me-2 align-middle"></div>
+                    <p class="txt small d-inline-block align-middle">Spent</p>
+                  </div>
+                  <input type="text" name="daterange" value="01/01/2018 - 01/15/2018"  class="navy txt medium border-0 d-inline p-2" aria-label="date"/>
+                </div>
+              </div>
+              <div id="bar-chart" data-colors="#FF0956,#FF0956,#FF0956"></div>
+            </div>
+            <div class="p-4 bgWhite br-commun mb-5">
+              <div class="row">
+                <div class="col-lg-3">
+                  <div class="px-4 py-5 bgNavy br-commun overflow-hidden p-relative">
+                    <div class="mb-5">
+                      <p class="txt white d-inline-block semi-bold align-middle">
+                        <span class="small half-opacity uppercase mb-2 d-block regular">Available funds</span>
+                        $42,100</p>
+                      <img src="images/static/chip.svg" alt="" class="float-end card-chip d-inline-block align-middle">
+                    </div>
+                    <div class="mb-5">
+                      <h2 class="white mb-3">John Doe</h2>
+                      <p class="txt white d-inline-block me-2 bigger semi-bold">**** **** ****  4796</p>
+                      <a href="javascript:;" class="d-inline-block"><img src="images/static/copy-number.svg" alt=""></a>
+                    </div>
+                    <div class="mb-5">
+                      <p class="txt white d-inline-block semi-bold align-middle me-5">
+                        <span class="small half-opacity uppercase mb-2 d-block regular">cvv</span>
+                        384</p>
+                        <p class="txt white d-inline-block semi-bold align-middle">
+                          <span class="small half-opacity uppercase mb-2 d-block regular">Exp</span>
+                          02/25</p>
+                    </div>
+                    <div class="mb-0">
+                      <div class="logo-patern">
+                        <img src="images/static/logo-patern.svg" alt="">
+                      </div>
+                      <div class="master-card float-end align-middle">
+                        <img src="images/static/mastercard-colored.svg" alt="" class="my-auto">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-9">
+                  <div class="row mb-4">
+                    <div class="col-lg-8">
+                      <div class="br-commun bgLowWhite overflow-hidden">
+                        <p class="txt bigger p-5">Balance: <span class="h2 semi-bold mx-2">$ 42,100.00</span></p>
+                        <ul class="d-flex bgLowNavy p-2">
+                          <li class="mx-auto">
+                            <p class="d-block mb-0">Company:</p>
+                            <p class="d-block mb-0">$ 12,145.00</p>
+                          </li>
+                          <li class="mx-auto">
+                            <p class="d-block mb-0">Department::</p>
+                            <p class="d-block mb-0">$ 7,558.00</p>
+                          </li>
+                          <li class="mx-auto">
+                            <p class="d-block mb-0">John Doe::</p>
+                            <p class="d-block mb-0">$ 2,000.00</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="br-commun bgLowWhite overflow-hidden text-center p-2">
+                        <p class="txt bigger semi-bold pt-5 pb-4">$ 52,842.56 <span class="small half-opacity d-block py-1">Spent This Month</span></p>
+                        <a href="javascript:;" class="btn uppercase">
+                          <img src="images/static/plus-white.svg" alt="" class="d-inline-block me-2">
+                          <p class="mb-0 d-inline-block">Add funds</p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mb-4">
+                    <div class="col">
+                      <div class="form-check form-switch d-block me-3 mb-4">
+                        <label class="form-check-label txt bigger semi-bold" for="flexSwitchCheckDefault5">Freeze</label>
+                        <input class="form-check-input mb-2" type="checkbox" id="flexSwitchCheckDefault5" checked>
+                        <p class="txt">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod temmet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidupor.</p>
+                      </div>
+                      <div class="form-check form-switch d-block me-3 mb-4">
+                        <label class="form-check-label txt bigger semi-bold" for="flexSwitchCheckDefault6">Block</label>
+                        <input class="form-check-input mb-2" type="checkbox" id="flexSwitchCheckDefault6">
+                        <p class="txt">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod temmet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidupor.</p>
+                      </div>
+                      <div class="form-check form-switch d-block me-3 mb-4">
+                        <label class="form-check-label txt bigger semi-bold" for="flexSwitchCheckDefault7">Active</label>
+                        <input class="form-check-input mb-2" type="checkbox" id="flexSwitchCheckDefault7">
+                        <p class="txt">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod temmet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidupor.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mb-4">
+                    <div class="col-auto mb-2 mb-md-0">
+                      <a href="javascript:;" class="btn uppercase">Card Control</a>
+                    </div>
+                    <div class="col-auto">
+                      <a href="javascript:;" class="btn uppercase">
+                        <img src="images/static/reissue.svg" alt="" class="d-inline-block me-2">
+                        <p class="mb-0 d-inline-block">Reissue </p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+
+            <div class="py-md-5">
+              <div class="row my-3 mb-md-5">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center">
+                  <p class="h1 bold">Recent Transactions</p>
+                </div>
+              </div>
+              <div class="row mb-5">
+                <div class="table-wrapper table-responsive table-transactions">
+                  <table class="table align-middle">
+                    <thead>
+                      <tr>
+                        <th scope="col" class="row-person"><p class="txt half-opacity p-2 small">Person</p></th>
+                        <th scope="col" class="row-category"><p class="txt half-opacity p-2 small">Category</p></th>
+                        <th scope="col" class="row-amount"><p class="txt half-opacity p-2 small">Amount</p></th>
+                        <th scope="col" class="row-budget"><p class="txt half-opacity p-2 small">Budget</p></th>
+                        <th scope="col" class="row-receipt"><p class="txt half-opacity p-2 small">Receipt</p></th>
+                        <th scope="col" class="row-merchant"><p class="txt half-opacity p-2 small">Merchant</p></th>
+                        <th scope="col" class="row-date"><p class="txt half-opacity p-2 small">Date</p></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="">
+                        <td class="row-person"><p class="txt px-2 py-3">John Doe</p></td>
+                        <td class="row-category"><p class="txt px-2 py-3">Hosting</p></td>
+                        <td class="row-amount"><p class="txt px-2 py-3">$ 14.99</p></td>
+                        <td class="row-budget"><p class="txt px-2 py-3">$ 1,743.03</p></td>
+                        <td class="row-receipt"><img src="images/static/receipt.svg" alt="" class="px-2 py-3"></td>
+                        <td class="row-merchant"><p class="txt px-2 py-3">Amazon AWS</p></td>
+                        <td class="row-date"><p class="txt px-2 py-3">Jan 06, 2021</p></td>
+                      </tr>
+                      <tr>
+                        <td class="row-person"><p class="txt px-2 py-3">John Doe</p></td>
+                        <td class="row-category"><p class="txt px-2 py-3">Hosting</p></td>
+                        <td class="row-amount"><p class="txt px-2 py-3">$ 14.99</p></td>
+                        <td class="row-budget"><p class="txt px-2 py-3">$ 1,743.03</p></td>
+                        <td class="row-receipt"><img src="images/static/receipt.svg" alt="" class="px-2 py-3"></td>
+                        <td class="row-merchant"><p class="txt px-2 py-3">Amazon AWS</p></td>
+                        <td class="row-date"><p class="txt px-2 py-3">Jan 06, 2021</p></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="row mb-5 justify-content-end">
+                <div class="col-auto">
+                  <a href="javascript:;" class="txt pink medium">View Full List</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="logo-wrapper d-inline-block align-middle">
+              <img src="images/static/logo-colored.svg" alt="Logo Colored">
+            </div>
+            <div class="footer-content d-inline-block align-middle mx-2">
+              <ul>
+                <li><a href="javascript:;" class="txt">Privacy Policy</a></li>
+                <li><a href="javascript:;" class="txt">Terms of Use</a></li>
+                <li><a href="javascript:;" class="txt">Legal</a></li>
+              </ul>
+              <p class="txt half-opacity rights">© 2021 Tmam - All Rights Reserved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="addAdmin" tabindex="-1" aria-labelledby="addAdminLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="row mb-4 pb-4">
+            <div class="col-12 text-center">
+              <img src="images/static/dashboard-border.svg" alt="admin icon" class="icon-blue my-auto mx-auto mb-md-2">
+              <h3>Marketing  Department Admins</h3>
+            </div>
+          </div>
+          <div class="row mb-4 pb-4">
+            <p class="txt mb-3 bold">Edit  Admin:</p>
+            <div class="col-12 mb-3">
+              <div class="grey-box text-start">
+                <img src="images/static/admin-blue.svg" alt="admin icon" class="d-inline-block me-2 align-middle">
+                <p class="txt d-inline-block align-middle">Maseeh.ahmed@tmam.com</p>
+                <a href="javascript:;" class="close">
+                  <img src="images/static/close.svg" alt="close">
+                </a>
+              </div>
+            </div>
+            <div class="col-12 mb-3">
+              <div class="grey-box text-start">
+                <img src="images/static/admin-blue.svg" alt="admin icon" class="d-inline-block me-2 align-middle">
+                <p class="txt d-inline-block align-middle">Maseeh.ahmed@tmam.com</p>
+                <a href="javascript:;" class="close">
+                  <img src="images/static/close.svg" alt="close">
+                </a>
+              </div>
+            </div>
+            <div class="col-12 mb-3">
+              <div class="grey-box text-start">
+                <img src="images/static/admin-blue.svg" alt="admin icon" class="d-inline-block me-2 align-middle">
+                <p class="txt d-inline-block align-middle">Maseeh.ahmed@tmam.com</p>
+                <a href="javascript:;" class="close">
+                  <img src="images/static/close.svg" alt="close">
+                </a>
+              </div>
+            </div>
+          </div>
+          <form class="row">
+            <div class="mb-3">
+              <label for="exampleInputAdmin" class="form-label d-none">Select Admin</label>
+              <select class="form-select grey-box text-start txt" aria-label="Default select" id="exampleInputAdmin">
+                <option selected disabled>Select Admin</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+            <div class="col-12 text-center">
+              <button type="submit" class="btn">Add Admin</button>
+            </div>
+          </form>
+          <a href="javascript:;" class="close" data-bs-dismiss="modal">
+            <img src="images/static/close.svg" alt="close">
+          </a>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(function() {
+        $('input[name="daterange"]').daterangepicker({
+          opens: 'left'
+        }, function(start, end, label) {
+          console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+        });
+      });
+      </script>
+      <script>
+        $(document).ready(function() {
+          $('.table').DataTable({
+          //disable sorting on last column
+          "columnDefs": [
+            { "orderable": false, "targets": 5 }
+          ],
+          language: {
+            //customize pagination prev and next buttons: use arrows instead of words
+            'paginate': {
+              'previous': '<span><img src="images/static/arrow-left.svg"></span>',
+              'next': '<span><img src="images/static/arrow-right.svg"></span>'
+            }
+          }
+        }) 
+
+
+
+        barChart();
+        $(window).resize(function() {
+          window.barChart.redraw();
+        });
+
+      });
+      function barChart() {
+        var labelColor = jQuery('#bar-chart').css('color');
+        window.barChart = Morris.Bar({
+          element: 'bar-chart',
+          data: [
+            { m: 'Jan', a: "900" , b: "1500", c: "2000", d: "3000" },
+            { m: 'Feb', a: "900" , b: "1500", c: "2000", d: "3000" },
+            { m: 'Mar', a: "900" , b: "1500", c: "2000", d: "3000" },
+            { m: 'Apr', a: "900" , b: "1500", c: "2000", d: "3000" },
+            { m: 'May', a: "900" , b: "1500", c: "2000", d: "3000" },
+            { m: 'Jun', a: "900" , b: "4800", c: "2000", d: "3000" },
+          ],
+          xkey: 'm',
+          ykeys: ['a', 'b', 'c', 'd'],
+          labels: ['T1', 'T2', 'T3', 'T4'],
+          lineWidth: '3px',
+          resize: true,
+          redraw: true,
+          gridTextColor: labelColor,
+          barColors: jQuery('#bar-chart').data('colors').split(',')
+        });
+    }
+      </script>
+</body>
+</html>

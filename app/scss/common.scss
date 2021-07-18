@@ -117,12 +117,21 @@ h3, .h3{
     &.bigger{
         font-size: 16px;
     }
+    &.big{
+        font-size: 18px;
+    }
     &.small{
         font-size: 12px;
     }
     &.medium{
         @extend.font-barlow-medium;
     }
+    &.semi-bold{
+        @extend.font-barlow-semibold;
+    }
+}
+.regular{
+    @extend.font-barlow-regular;
 }
 .uppercase{
     text-transform: uppercase;
@@ -133,11 +142,26 @@ h3, .h3{
 .white{
     color: $primary-color-white;
 }
+.bgWhite{
+    background-color: $primary-color-white;
+}
+.bgLowWhite{
+    background-color: #F6F6F6;
+}
 .pink{
     color: $primary-color-pink;
 }
 .navy{
     color: $primary-color-navy;
+}
+.bgNavy{
+    background-color: $primary-color-navy;
+}
+.bgLowNavy{
+    background-color: #EEEEEE;
+}
+.br-commun{
+    border-radius: 14px;
 }
 a, button{
     display: block;
@@ -154,7 +178,7 @@ a, button{
 }
 .btn{
     background-color: $primary-color-pink;
-    padding: 10px 40px;
+    padding: 15px 40px;
     @extend.font-barlow-medium;
     color: $primary-color-white;
     border: 1px solid $primary-color-pink;
@@ -182,6 +206,7 @@ a, button{
 }
 .breadcrumb-item+.breadcrumb-item::before{
     padding: 0 1rem;
+    content: url("../images/static/arrow-right.svg");
 }
 .breadcrumb-item{
     &.active{
@@ -291,6 +316,7 @@ ul{
 .form-check-input[type=checkbox]:checked{
     background-color: $primary-color-pink;
 }
+
 .grey-box{
     padding: 26px 20px;
     background-color: rgba($color: $primary-color-navy, $alpha: 0.03);
@@ -352,6 +378,19 @@ ul{
 .dropdown-menu{
     li{
         width: 100%;
+    }
+}
+.dropdown-toggle::after{
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+    content: url("../images/static/arrow-down.svg");
+    float: right;
+}
+.form-check-input, .form-check-label{
+    &:hover{
+        cursor: pointer;
     }
 }
 .ar{

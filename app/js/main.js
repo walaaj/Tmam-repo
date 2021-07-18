@@ -4,7 +4,6 @@ jQuery(function($){
     
     $(document).ready(function() {
         $(".eye-slash").click(function(){
-            console.log("eye clicked")
             //event.preventDefault();
             if($('#show_hide_password input').attr("type") == "text"){
                 console.log("type text")
@@ -22,8 +21,34 @@ jQuery(function($){
         $('input[name="dates"]').daterangepicker();
         
     });
+
+
+
+    $('.set-balance').click(function() {
+        if ($(this).is(':checked')) {
+          $(".card-limits").addClass("d-none");
+          $(".card-balance").removeClass("d-none");
+        }
+    });
+    $('.set-limits').click(function() {
+        if ($(this).is(':checked')) {
+          $(".card-limits").removeClass("d-none");
+          $(".card-balance").addClass("d-none");
+        }
+    });
+    $('.specific-number').click(function() {
+        if ($(this).is(':checked')) {
+          $(".card-input").removeClass("d-none");
+        }
+        else{
+            $(".card-input").addClass("d-none");
+        }
+    });
     
     ///////////////////////////////////////////////////////////////   END DOCUMENT READY  ///////////////////////////////////////////////////////////////
+
+    
+
 
 
 

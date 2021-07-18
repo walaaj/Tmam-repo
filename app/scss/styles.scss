@@ -47,12 +47,12 @@ header{
             vertical-align: middle;  
         }
         &::after{
-            background-image: url("../images/static/arrow-down.svg");
             width: 10px;
             height: 8px;
+            /* background-image: url("../images/static/arrow-down.svg");
             background-position: center;
             background-repeat: no-repeat;
-            background-size: contain;
+            background-size: contain; */
             border: none;
             @extend.half-opacity;
             //@extend.cubicTransition;
@@ -275,11 +275,12 @@ footer{
         height: 105px;
         background-color: #fff;
         img{
-            width: 24px;
-            height: 48px;
+            width: 36px;
+            height: 60px;
         }
     }
     .nav-item{
+        position: relative;
         .nav-link{
             img{
                 width: 16px;
@@ -287,10 +288,29 @@ footer{
                 object-fit: contain;
             }
         }
+        &:before{
+            content: '';
+            width: 6px;
+            height: 100%;
+            background-color: $primary-color-pink;
+            position: absolute;
+            top: 0;
+            left: -3px;
+            border-radius: 3px;
+            display: none;
+        }
         &.active{
             .nav-link{
                 opacity: 1;
             }
+            &::before{
+                display: block;
+            }
+        }
+    }
+    .nav-link{
+        &:hover{
+            opacity: 1;
         }
     }
 }
@@ -313,9 +333,12 @@ footer{
     right: 14px;
     transform: translateY(-50%);
 }
+
+
+///////////////////////////// TABLE STYLING /////////////////////////////
 .table-wrapper{
     width: 100%;
-    overflow-x: scroll;
+    //overflow-x: scroll;
 }
 .table{
     .img-wrapper{
@@ -353,7 +376,7 @@ footer{
     }
     th{
         position: relative;
-        &::after{
+        &::before{
             content: '';
             position: absolute;
             top: 50%;
@@ -363,13 +386,159 @@ footer{
             transform: translateY(-50%);
             background-color: rgba($color: $primary-color-navy, $alpha: .2);
         }
+        &:last-child{
+            &:before{
+                display: none;
+            }
+        }
+    }
+    tbody {
+        tr[role="row"]{
+            &:hover, &.active{
+                background-color: rgba($color: $primary-color-navy, $alpha: .1);
+            }
+        }
     }
 }
+.dataTables_length, .dataTables_filter{
+    display: none;
+}
+.dataTables_info, .dataTables_paginate{
+    display: inline-block;
+    @extend.txt;
+    padding-top: 20px !important;
+    @extend.medium;
+}
+.dataTables_info{
+    @extend.medium;
+}
+.dataTables_paginate{
+    float: right;
+    span{
+        .paginate_button{
+            margin: 0 20px;
+            opacity: .5;
+            &.current{
+                opacity: 1;
+            }
+        }
+    }
+}
+table{
+    &.dataTable {
+        border-collapse: collapse !important;
+        thead {
+            .sorting, .sorting_asc, .sorting_desc{
+                &:after{
+                    content: url("../images/static/sorting.svg");
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+            }
+        }
+    }
+}
+.paginate_button{
+    display: inline-block;
+    opacity: 1;
+    &.disabled{
+        opacity: .5;
+    }
+}
+.table-transactions{
+    .dataTables_info, .dataTables_paginate{
+        display: none;
+    }
+}
+
 
 .input-group-text, .form-control {
     background-color: #fff;
     padding: 15px; 
 }
+
+.card-detail-tabs{
+    display: flex ;
+    li{
+        display: flex ;
+    }
+}
+.transformBtn{
+    transform: translateY(-7px);
+}
+
+
+///////////////////////////// CARD DETAILS STYLING /////////////////////////////
+.card-detail-tabs{
+    border-bottom: 2px solid rgba($color: $primary-color-navy, $alpha: .58);
+    li{
+        position: relative;
+        &:after{
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            height: 4px;
+            width: 100%;
+            left: 0;
+            background-color: transparent;
+            border-radius: 3px;
+        }
+        a{
+            @extend.half-opacity;
+        }
+        &.active{
+            &:after{
+                background-color: $primary-color-pink;
+            }
+            a{
+                color: $primary-color-pink;
+                opacity: 1;
+            }
+        }
+    }
+}
+.chart-wrapper{
+    //background-color: $primary-color-white;
+    //border-radius: 14px;
+    //padding: 20px;
+}
+.rect{
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    background-color: $primary-color-pink;
+}
+.morris-hover {
+    position:absolute;
+    z-index:1000;
+}
+.morris-hover.morris-default-style {     
+    border-radius:10px;
+    padding:6px;
+    color:#666;
+    background:rgba(255, 255, 255, 0.8);
+    border:solid 2px rgba(230, 230, 230, 0.8);
+    font-family:sans-serif;
+    font-size:12px;
+    text-align:center;
+}
+.morris-hover.morris-default-style .morris-hover-row-label {
+    font-weight:bold;
+    margin:0.25em 0;
+}
+
+.morris-hover.morris-default-style .morris-hover-point {
+    white-space:nowrap;
+    margin:0.1em 0;
+}
+.logo-patern{
+    position: absolute;
+    bottom: -15%;
+    left: 0;
+}
+
+
 // Comon mobile & Tablet
 @media (min-width: 100px) and (max-width: 1000px){
 }
@@ -380,9 +549,12 @@ footer{
         .logo-wrapper{
             width: 70px;
             height: 70px;
+            position: absolute;
+            top: 10px;
+            left: 140px;
             img{
-                width: 100%;
-                height: 100%;
+                width: 80%;
+                height: 80%;
                 object-fit: contain;
             }
         }
@@ -413,11 +585,14 @@ footer{
     }
     .sibebar {
         .logo-wrapper{
-            width: 30px;
-            height: 30px;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 22px;
+            left: 52px;
             img{
-                width: 100%;
-                height: 100%;
+                width: 80%;
+                height: 80%;
                 object-fit: contain;
             }
         }
@@ -429,6 +604,12 @@ footer{
         .nav-link{
             padding: 0;
             text-align: center;
+        }
+    }
+    .card-detail-tabs{
+        display: block;
+        li{
+            display: block;
         }
     }
 }
