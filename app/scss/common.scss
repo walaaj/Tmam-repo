@@ -83,8 +83,6 @@ Styles
     -moz-transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);
     -o-transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);
 }
-
-
 .half-opacity{
     opacity: .5;
 }
@@ -148,8 +146,14 @@ h3, .h3{
 .bgLowWhite{
     background-color: #F6F6F6;
 }
+.bgOffWhite{
+    background-color: #FFF;
+}
 .pink{
     color: $primary-color-pink;
+}
+.bgPink{
+    background-color: $primary-color-pink;
 }
 .navy{
     color: $primary-color-navy;
@@ -158,10 +162,13 @@ h3, .h3{
     background-color: $primary-color-navy;
 }
 .bgLowNavy{
-    background-color: #EEEEEE;
+    background-color: #EEEEEE !important;
 }
 .br-commun{
     border-radius: 14px;
+}
+.min-width{
+    min-width: 200px;
 }
 a, button{
     display: block;
@@ -393,6 +400,34 @@ ul{
         cursor: pointer;
     }
 }
+.lh-46{
+    line-height: 46px !important;
+}
+/* .border-listing{
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 1px;
+        height: 100%;
+        background-color: rgba($color: $primary-color-navy, $alpha: 0.5);
+    }
+} */
+.circle{
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    &.edit-profile-img{
+        width: 200px;
+        height: 200px;
+    }
+    &.edit-profile{
+        width: 30px;
+        height: 30px;
+    }
+}
 .ar{
     .grey-box{
         .close{
@@ -401,7 +436,12 @@ ul{
         }
     }
 }
-
+// Comon mobile & Tablet
+@media (min-width: 100px) and (max-width: 1000px){
+    .border-end {
+        border-bottom: 1px solid #dee2e6!important;
+    }
+}
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px){
     .btn{

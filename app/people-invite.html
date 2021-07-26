@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="keywords" content="">
+  <meta name="description" content="" />
+  <title>Tmam</title>
+  <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+  <!-- CSS only -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+  <link href="css/styles.css" rel="stylesheet">
+  <link href="css/responsive.css" rel="stylesheet">
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.1.0/js/dataTables.responsive.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+
+
+
+
+  
+</head>
+
+<body>
+    <div class="container-fluid ms-0 ps-0">
+      <div class="row">
+        <div class="col-2">
+          <div class="py-5 sibebar">
+            <div class="d-flex flex-column flex-shrink-0">
+              <a href="/" class="d-flex mx-auto logo-wrapper mb-3">
+                <img src="images/static/logo-colored.svg" alt="Logo Colored">
+              </a>
+              <ul class="nav nav-pills flex-column mb-auto">
+                <li class="nav-item my-3 px-md-4">
+                  <a href="#" class="nav-link half-opacity">
+                    <img src="images/static/dashboard-blue.svg" alt="" class="d-inline-block">
+                    <p class="txt semi-bold d-none d-lg-inline-block mx-3">Dashboard</p>
+                  </a>
+                </li>
+                <li class="nav-item my-3 px-md-4">
+                  <a href="#" class="nav-link half-opacity">
+                    <img src="images/static/budget.svg" alt="" class="d-inline-block">
+                    <p class="txt semi-bold d-none d-lg-inline-block mx-3">Budget</p>
+                  </a>
+                </li>
+                <li class="nav-item my-3 px-md-4">
+                  <a href="#" class="nav-link half-opacity">
+                    <img src="images/static/cards.svg" alt="" class="d-inline-block">
+                    <p class="txt semi-bold d-none d-lg-inline-block mx-3">Cards</p>
+                  </a>
+                </li>
+                <li class="nav-item my-3 px-md-4 active">
+                  <a href="#" class="nav-link half-opacity">
+                    <img src="images/static/people.svg" alt="" class="d-inline-block">
+                    <p class="txt semi-bold d-none d-lg-inline-block mx-3">People</p>
+                  </a>
+                </li>
+                <li class="nav-item my-3 px-md-4">
+                  <a href="#" class="nav-link half-opacity">
+                    <img src="images/static/expenses.svg" alt="" class="d-inline-block">
+                    <p class="txt semi-bold d-none d-lg-inline-block mx-3">Expenses</p>
+                  </a>
+                </li>
+                <li class="nav-item my-3 px-md-4">
+                  <a href="#" class="nav-link half-opacity">
+                    <img src="images/static/reports.svg" alt="" class="d-inline-block">
+                    <p class="txt semi-bold d-none d-lg-inline-block mx-3">Report</p>
+                  </a>
+                </li>
+                <li class="nav-item my-3 px-md-4">
+                  <a href="#" class="nav-link half-opacity">
+                    <img src="images/static/acconting.svg" alt="" class="d-inline-block">
+                    <p class="txt semi-bold d-none d-lg-inline-block mx-3">Accounting </p>
+                  </a>
+                </li>
+                <li class="nav-item my-3 px-md-4">
+                  <a href="#" class="nav-link half-opacity">
+                    <img src="images/static/settings.svg" alt="" class="d-inline-block">
+                    <p class="txt semi-bold d-none d-lg-inline-block mx-3">Settings </p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-10">
+          <div class="container-fluid p-0">
+            <header class="no-bg p-0">
+              <div class="row justify-content-end border-bottom py-3">
+                <div class="col-8 text-end">
+                  <a href="javascript:;" class="notification new-notification d-inline-block mx-4 my-3 align-middle">
+                    <img src="images/static/bell.svg" alt="notification">
+                  </a>
+                  <div class="dropdown float-end d-inline-block align-middle h-100">
+                    <button class="dropdown-toggle h-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <img src="images/dynamic/user-img.jpg" alt="user image" class="user-img d-inline-block">
+                      <p class="txt d-none d-md-inline-block text-start mb-0 align-middle mx-2 bold">
+                        Yoko Ono
+                        <span class="half-opacity d-block">yoko.ono@tmam.com</span>
+                      </p>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </header>
+            <nav  aria-label="breadcrumb" class="py-5">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item txt bigger p-0 medium"><a href="#" class="d-inline-block">People</a></li>
+                <li class="breadcrumb-item txt bigger p-0 medium active" aria-current="page">Invite</li>
+              </ol>
+            </nav>
+            <div class="row mb-5">
+              <div class="col-auto mx-auto">
+                <div class="text-center wizard-content mb-5">
+                  <img src="images/static/profile-pink.svg" alt="admin icon" class="icon-blue my-auto mx-auto mb-md-2">
+                  <h1>Invite a Person</h1>
+                  <p class="txt half-opacity">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy</p>
+                </div>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-lg-10 mb-4">
+                <form class="grey-box text-start wizard-content mb-5">
+                  <div class="row my-5">
+                    <div class="col-auto mx-auto">
+                      <img src="images/static/profile-pink-plus.svg" alt="admin icon" class="my-auto mx-auto">
+                    </div>
+                  </div>
+                  <div class="row mb-4">
+                    <div class="col-md-6 mb-4 mb-md-0">
+                      <label for="peopleName" class="form-label h3">Full Name:</label>
+                      <input type="text" class="form-control txt" id="peopleName" aria-describedby="" placeholder="Full Name">
+                    </div>
+                    <div class="col-md-6 mb-4 mb-md-0">
+                      <label for="peopleLastName" class="form-label h3">Last Name</label>
+                      <input type="text" class="form-control txt" id="peopleLastName" aria-describedby="" placeholder="Last Name">
+                    </div>
+                  </div>
+                  <div class="row mb-4">
+                    <div class="col-md-6 mb-4 mb-md-0">
+                      <label for="exampleInputEmail1" class="form-label h3">Email:</label>
+                      <input type="email" class="form-control txt" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email address..">
+                    </div>
+                    <div class="col-md-6 mb-4 mb-md-0">
+                      <label for="exampleInputNumber1" class="form-label h3">Mobile number:</label>
+                      <div class="input-group txt" id="exampleInputNumber1">
+                        <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">961</button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">971</a></li>
+                          <li><a class="dropdown-item" href="#">01</a></li>
+                          <li><a class="dropdown-item" href="#">974</a></li>
+                        </ul>
+                        <input type="text" class="form-control txt" aria-label="Text input with dropdown button" placeholder="Enter phone number..">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mb-4">
+                    <div class="col-md-6 mb-4 mb-md-0">
+                      <label for="peopleDep" class="form-label h3">Department:</label>
+                      <select id="peopleDep" class="form-select txt">
+                        <option selected>Choose...</option>
+                        <option>...</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6 mb-4 mb-md-0">
+                      <label for="peopleJob" class="form-label h3">Job Title:</label>
+                      <select id="peopleJob" class="form-select txt">
+                        <option selected>Choose...</option>
+                        <option>...</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row mb-4">
+                    <div class="col-md-6 mb-4 mb-md-0">
+                      <label for="peopleVerification" class="form-label h3">Verification Type:</label>
+                      <select id="peopleVerification" class="form-select txt">
+                        <option selected>Choose...</option>
+                        <option>...</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6 mb-4 mb-md-0">
+                      <label for="peoplePassNumber" class="form-label h3">Passport Number:</label>
+                      <input type="number" class="form-control txt" id="peoplePassNumber" aria-describedby="" placeholder="Passport Number">
+                    </div>
+                  </div>
+                  <div class="row mb-4">
+                    <div class="col-md-6 mb-4 mb-md-0">
+                      <label for="peopleKyc" class="form-label h3">KYC Valid date:</label>
+                      <input type="text" class="form-control txt" id="peopleKyc" aria-describedby="" placeholder="KYC Valid date">
+                    </div>
+                  </div>
+                </form>
+                <form class="grey-box text-start wizard-content mb-5">
+                  <div class="row">
+                    <div class="col">
+                      <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link active" id="balance-tab" data-bs-toggle="tab" data-bs-target="#balance" type="button" role="tab" aria-controls="balance" aria-selected="true">
+                            <input class="form-check-input me-2" type="radio" name="flexRadioDefault" id="flexRadioDefaultTab1" checked>
+                            <label class="form-check-label txt" for="flexRadioDefaultTab1">
+                              Set balance
+                            </label>
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="limits-tab" data-bs-toggle="tab" data-bs-target="#limits" type="button" role="tab" aria-controls="limits" aria-selected="false">
+                            <input class="form-check-input me-2" type="radio" name="flexRadioDefault" id="flexRadioDefaultTab2">
+                            <label class="form-check-label txt" for="flexRadioDefaultTab2">
+                              Set limits
+                            </label>
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="inherit-tab" data-bs-toggle="tab" data-bs-target="#inherit" type="button" role="tab" aria-controls="inherit" aria-selected="false">
+                            <input class="form-check-input me-2" type="radio" name="flexRadioDefault" id="flexRadioDefaultTab3">
+                            <label class="form-check-label txt" for="flexRadioDefaultTab3">
+                              Inherited
+                            </label>
+                          </button>
+                        </li>
+                      </ul>
+                      <div class="tab-content bgOffWhite br-commun overflow-hidden" id="myTabContent">
+                        <div class="tab-pane fade p-relative show active pt-4 py-lg-4" id="balance" role="tabpanel" aria-labelledby="balance-tab">
+                          <div class="row mb-4 px-4">
+                            <div class="col">
+                              <p class="txt me-2 d-inline-block">From:</p>
+                              <div class="form-check d-inline-block mx-2">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefaultFrom1">
+                                <label class="form-check-label txt" for="flexRadioDefaultFrom1">
+                                  Company Balance
+                                </label>
+                              </div>
+                              <div class="form-check d-inline-block mx-2">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefaultFrom2">
+                                <label class="form-check-label txt" for="flexRadioDefaultFrom2">
+                                  Department Balance
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row px-4">
+                            <div class="col-auto">
+                              <label for="" class="col-form-label txt my-0 my-xl-3">Amount</label>
+                            </div>
+                            <div class="col-auto">
+                              <input type="text" id="" class="form-control txt bgLowNavy" aria-describedby="passwordHelpInline" value="$2,500">
+                            </div>
+                          </div>
+                          <div class="row my-2 my-lg-5"></div>
+                          <ul class="d-lg-flex bgLowNavy p-lg-absolute px-4 py-2">
+                            <li class="me-2 me-lg-0 mx-lg-auto">
+                              <div class="row">
+                                <div class="col-auto">
+                                  <label for="balanceFrom" class="col-form-label txt my-0 my-xl-3">From</label>
+                                </div>
+                                <div class="col-auto">
+                                  <select id="balanceFrom" class="form-select txt d-inline-block min-width">
+                                    <option selected>Choose...</option>
+                                    <option>...</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="me-2 me-lg-0 mx-lg-auto">
+                              <div class="row">
+                                <div class="col-auto">
+                                  <label for="balanceCurrent" class="col-form-label txt my-0 my-xl-3">Current</label>
+                                </div>
+                                <div class="col-auto">
+                                  <input type="text" id="" class="form-control txt bgOffWhite" aria-describedby="balanceCurrent" value="$2,500">
+                                </div>
+                              </div>
+                            </li>
+                            <li class="me-2 me-lg-0 mx-lg-auto">
+                              <div class="row">
+                                <div class="col-auto">
+                                  <label for="balanceNew" class="col-form-label txt my-0 my-xl-3">New</label>
+                                </div>
+                                <div class="col-auto">
+                                  <input type="text" id="" class="form-control txt bgOffWhite" aria-describedby="balanceNew" value="$2,500">
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="tab-pane fade p-relative pt-4 py-lg-4" id="limits" role="tabpanel" aria-labelledby="limits-tab">
+                          <div class="row mb-4 px-4">
+                            <div class="col-5">
+                              <div class="row">
+                                <div class="col-auto">
+                                  <label for="" class="col-form-label txt my-0 my-xl-3 uppercase">Amount</label>
+                                </div>
+                                <div class="col-auto">
+                                  <input type="text" id="" class="form-control txt bgLowNavy" aria-describedby="amount" value="$2,500">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-5">
+                              <div class="row">
+                                <div class="col-auto">
+                                  <label for="" class="col-form-label txt my-0 my-xl-3 uppercase">Remaining</label>
+                                </div>
+                                <div class="col-auto">
+                                  <input type="text" id="" class="form-control txt bgLowNavy" aria-describedby="Remaining" value="$2,500">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row mb-4 px-4">
+                            <div class="col">
+                              <div class="form-check form-switch d-inline-block me-3">
+                                <label class="form-check-label txt" for="flexSwitchCheckDefault1">Recurring</label>
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault1" checked>
+                              </div>
+                              <div class="form-check form-switch d-inline-block me-3">
+                                <label class="form-check-label txt" for="flexSwitchCheckDefault2">Inherited</label>
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault2">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row px-4">
+                            <div class="col">
+                              <div class="form-check d-inline-block mx-2">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault01" checked>
+                                <label class="form-check-label txt" for="flexRadioDefault01">
+                                  Yearly
+                                </label>
+                              </div>
+                              <div class="form-check d-inline-block mx-2">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault02">
+                                <label class="form-check-label txt" for="flexRadioDefault02">
+                                  Monthly
+                                </label>
+                              </div>
+                              <div class="form-check d-inline-block mx-2">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault03">
+                                <label class="form-check-label txt" for="flexRadioDefault03">
+                                  Weekly
+                                </label>
+                              </div>
+                              <div class="form-check d-inline-block mx-2">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault04">
+                                <label class="form-check-label txt" for="flexRadioDefault04">
+                                  Daily
+                                </label>
+                              </div>
+                              <div class="form-check d-inline-block mx-2">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault05">
+                                <label class="form-check-label txt uppercase" for="flexRadioDefault05">
+                                  Bring Forward Remaining Budget
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade p-relative pt-4 py-lg-4" id="inherit" role="tabpanel" aria-labelledby="inherit-tab">...</div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <div class="row justify-content-center my-4">
+                  <div class="col-md-8 text-center">
+                    <a href="javascript:;" class="btn">Invite User</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="logo-wrapper d-inline-block align-middle">
+              <img src="images/static/logo-colored.svg" alt="Logo Colored">
+            </div>
+            <div class="footer-content d-inline-block align-middle mx-2">
+              <ul>
+                <li><a href="javascript:;" class="txt">Privacy Policy</a></li>
+                <li><a href="javascript:;" class="txt">Terms of Use</a></li>
+                <li><a href="javascript:;" class="txt">Legal</a></li>
+              </ul>
+              <p class="txt half-opacity rights">© 2021 Tmam - All Rights Reserved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="addAdmin" tabindex="-1" aria-labelledby="addAdminLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="row mb-4 pb-4">
+            <div class="col-12 text-center">
+              <img src="images/static/dashboard-border.svg" alt="admin icon" class="icon-blue my-auto mx-auto mb-md-2">
+              <h3>Marketing  Department Admins</h3>
+            </div>
+          </div>
+          <div class="row mb-4 pb-4">
+            <p class="txt mb-3 bold">Edit  Admin:</p>
+            <div class="col-12 mb-3">
+              <div class="grey-box text-start">
+                <img src="images/static/admin-blue.svg" alt="admin icon" class="d-inline-block me-2 align-middle">
+                <p class="txt d-inline-block align-middle">Maseeh.ahmed@tmam.com</p>
+                <a href="javascript:;" class="close">
+                  <img src="images/static/close.svg" alt="close">
+                </a>
+              </div>
+            </div>
+            <div class="col-12 mb-3">
+              <div class="grey-box text-start">
+                <img src="images/static/admin-blue.svg" alt="admin icon" class="d-inline-block me-2 align-middle">
+                <p class="txt d-inline-block align-middle">Maseeh.ahmed@tmam.com</p>
+                <a href="javascript:;" class="close">
+                  <img src="images/static/close.svg" alt="close">
+                </a>
+              </div>
+            </div>
+            <div class="col-12 mb-3">
+              <div class="grey-box text-start">
+                <img src="images/static/admin-blue.svg" alt="admin icon" class="d-inline-block me-2 align-middle">
+                <p class="txt d-inline-block align-middle">Maseeh.ahmed@tmam.com</p>
+                <a href="javascript:;" class="close">
+                  <img src="images/static/close.svg" alt="close">
+                </a>
+              </div>
+            </div>
+          </div>
+          <form class="row">
+            <div class="mb-3">
+              <label for="exampleInputAdmin" class="form-label d-none">Select Admin</label>
+              <select class="form-select grey-box text-start txt" aria-label="Default select" id="exampleInputAdmin">
+                <option selected disabled>Select Admin</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+            <div class="col-12 text-center">
+              <button type="submit" class="btn">Add Admin</button>
+            </div>
+          </form>
+          <a href="javascript:;" class="close" data-bs-dismiss="modal">
+            <img src="images/static/close.svg" alt="close">
+          </a>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(function() {
+        $('input[name="daterange"]').daterangepicker({
+          opens: 'left'
+        }, function(start, end, label) {
+          console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+        });
+      });
+      </script>
+      <script>
+        $(document).ready(function() {
+          $('.table').DataTable({
+          //disable sorting on last column
+          "columnDefs": [
+            { "orderable": false, "targets": 5 }
+          ],
+          language: {
+            //customize pagination prev and next buttons: use arrows instead of words
+            'paginate': {
+              'previous': '<span><img src="images/static/arrow-left.svg"></span>',
+              'next': '<span><img src="images/static/arrow-right.svg"></span>'
+            }
+          }
+        }) 
+      });
+      </script>
+</body>
+</html>

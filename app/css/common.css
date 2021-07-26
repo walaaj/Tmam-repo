@@ -118,8 +118,14 @@ h3, .h3 {
 .bgLowWhite {
   background-color: #F6F6F6; }
 
+.bgOffWhite {
+  background-color: #FFF; }
+
 .pink {
   color: #FF0956; }
+
+.bgPink {
+  background-color: #FF0956; }
 
 .navy {
   color: #32325D; }
@@ -128,10 +134,13 @@ h3, .h3 {
   background-color: #32325D; }
 
 .bgLowNavy {
-  background-color: #EEEEEE; }
+  background-color: #EEEEEE !important; }
 
 .br-commun {
   border-radius: 14px; }
+
+.min-width {
+  min-width: 200px; }
 
 a, button {
   display: block;
@@ -320,9 +329,39 @@ ul {
 .form-check-input:hover, .form-check-label:hover {
   cursor: pointer; }
 
+.lh-46 {
+  line-height: 46px !important; }
+
+/* .border-listing{
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 1px;
+        height: 100%;
+        background-color: rgba($color: $primary-color-navy, $alpha: 0.5);
+    }
+} */
+.circle {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px; }
+  .circle.edit-profile-img {
+    width: 200px;
+    height: 200px; }
+  .circle.edit-profile {
+    width: 30px;
+    height: 30px; }
+
 .ar .grey-box .close {
   right: inherit;
   left: 10px; }
+
+@media (min-width: 100px) and (max-width: 1000px) {
+  .border-end {
+    border-bottom: 1px solid #dee2e6 !important; } }
 
 @media (max-width: 575.98px) {
   .btn.add-new-btn {

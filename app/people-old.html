@@ -10,79 +10,68 @@
   <title>Tmam</title>
   <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
   <!-- CSS only -->
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <!-- Link Swiper's CSS -->
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
   <link href="css/styles.css" rel="stylesheet">
   <link href="css/responsive.css" rel="stylesheet">
   
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
-  <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.1.0/js/dataTables.responsive.min.js"></script>
-
   <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-
-
-  
 </head>
 
 <body>
     <div class="container-fluid ms-0 ps-0">
       <div class="row">
-        <div class="col-2">
-          <div class="py-5 sibebar">
+        <div class="col-2 col-lg-3">
+          <div class="py-5 sibebar px-md-4">
             <div class="d-flex flex-column flex-shrink-0">
               <a href="/" class="d-flex mx-auto logo-wrapper mb-3">
                 <img src="images/static/logo-colored.svg" alt="Logo Colored">
               </a>
               <ul class="nav nav-pills flex-column mb-auto">
-                <li class="nav-item my-3 px-md-4">
+                <li class="nav-item py-3">
                   <a href="#" class="nav-link half-opacity">
                     <img src="images/static/dashboard-blue.svg" alt="" class="d-inline-block">
                     <p class="txt semi-bold d-none d-lg-inline-block mx-3">Dashboard</p>
                   </a>
                 </li>
-                <li class="nav-item my-3 px-md-4">
+                <li class="nav-item py-3">
                   <a href="#" class="nav-link half-opacity">
                     <img src="images/static/budget.svg" alt="" class="d-inline-block">
                     <p class="txt semi-bold d-none d-lg-inline-block mx-3">Budget</p>
                   </a>
                 </li>
-                <li class="nav-item my-3 px-md-4">
+                <li class="nav-item py-3">
                   <a href="#" class="nav-link half-opacity">
                     <img src="images/static/cards.svg" alt="" class="d-inline-block">
                     <p class="txt semi-bold d-none d-lg-inline-block mx-3">Cards</p>
                   </a>
                 </li>
-                <li class="nav-item my-3 px-md-4 active">
+                <li class="nav-item py-3 active">
                   <a href="#" class="nav-link half-opacity">
                     <img src="images/static/people.svg" alt="" class="d-inline-block">
                     <p class="txt semi-bold d-none d-lg-inline-block mx-3">People</p>
                   </a>
                 </li>
-                <li class="nav-item my-3 px-md-4">
+                <li class="nav-item py-3">
                   <a href="#" class="nav-link half-opacity">
                     <img src="images/static/expenses.svg" alt="" class="d-inline-block">
                     <p class="txt semi-bold d-none d-lg-inline-block mx-3">Expenses</p>
                   </a>
                 </li>
-                <li class="nav-item my-3 px-md-4">
+                <li class="nav-item py-3">
                   <a href="#" class="nav-link half-opacity">
                     <img src="images/static/reports.svg" alt="" class="d-inline-block">
                     <p class="txt semi-bold d-none d-lg-inline-block mx-3">Report</p>
                   </a>
                 </li>
-                <li class="nav-item my-3 px-md-4">
+                <li class="nav-item py-3">
                   <a href="#" class="nav-link half-opacity">
                     <img src="images/static/acconting.svg" alt="" class="d-inline-block">
                     <p class="txt semi-bold d-none d-lg-inline-block mx-3">Accounting </p>
                   </a>
                 </li>
-                <li class="nav-item my-3 px-md-4">
+                <li class="nav-item py-3">
                   <a href="#" class="nav-link half-opacity">
                     <img src="images/static/settings.svg" alt="" class="d-inline-block">
                     <p class="txt semi-bold d-none d-lg-inline-block mx-3">Settings </p>
@@ -92,8 +81,8 @@
             </div>
           </div>
         </div>
-        <div class="col-10">
-          <div class="container-fluid p-0">
+        <div class="col-10 col-lg-9">
+          <div class="container-fluid">
             <header class="no-bg p-0">
               <div class="row justify-content-end border-bottom py-3">
                 <div class="col-8 text-end">
@@ -118,7 +107,7 @@
               </div>
             </header>
             <div class="py-md-5 fit-height-listing">
-              <div class="row my-3 mb-md-5">
+              <div class="row mb-5">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center">
                   <h1 class="bold">People</h1>
                   <div class="btn-toolbar mb-2 mb-md-0">
@@ -132,8 +121,8 @@
                 </div>
               </div>
               <div class="row mb-5">
-                <div class="col-lg-5 mb-2 mb-lg-0 pe-lg-0">
-                  <div class="grey-box filter h-100 py-3">
+                <div class="col-lg-5">
+                  <div class="grey-box filter mb-2">
                     <div class="input-group w-50-fit">
                       <div class="w-20 align-middle align-items-center p-relative half-opacity">
                         <span class="input-group-text me-1" id="basic-addon1"><img src="images/static/dashboard-border.svg" alt=""></span>
@@ -165,39 +154,52 @@
                   </div>
                 </div>
                 <div class="col-lg-7">
-                  <div class="grey-box filter h-100 py-3">
-                    <p class="txt half-opacity text-start small">Search</p>
-                    <div class="input-group">
-                      <span class="input-group-text no-bg" id="basic-addon1"><img src="images/static/search.svg" alt=""></span>
-                      <input type="text" class="form-control py-0 txt medium no-bg half-opacity" placeholder="type here..." aria-label="search" aria-describedby="basic-addon1">
-                    </div>
-                  </div>
+                  <form class="d-flex h-100 p-relative">
+                    <input class="form-control grey-box  mb-2 txt" type="search" placeholder="Search Here..." aria-label="Search">
+                    <button class="btn btn-search" type="submit">
+                      <img src="images/static/search.svg" alt="" class="d-inline-block">
+                      <p class="mb-0 d-none d-md-inline-block ms-2">Search</p>
+                    </button>
+                  </form>
                 </div>
               </div>
               <div class="row mb-5">
-                <div class="table-wrapper table-responsive">
-                  <table class="table align-middle">
+                <div class="table-wrapper">
+                  <table class="table">
                     <thead>
                       <tr>
-                        <th scope="col" class="row-name"><p class="txt half-opacity p-2 small">Type</p></th>
-                        <th scope="col" class="row-dep"><p class="txt half-opacity p-2 small">Department</p></th>
-                        <th scope="col" class="row-fund"><p class="txt half-opacity p-2 small">Available Funds</p></th>
-                        <th scope="col" class="row-status"><p class="txt half-opacity p-2 small">Status</p></th>
-                        <th scope="col" class="row-cards"><p class="txt half-opacity p-2 small">Cards</p></th>
-                        <th scope="col" class="row-view-btn"><p class="txt half-opacity p-2 small"></p></th>
+                        <th scope="col" class="row-name"><p class="txt half-opacity p-2">Name</p></th>
+                        <th scope="col" class="row-dep"><p class="txt half-opacity p-2">Department</p></th>
+                        <th scope="col" class="row-fund">
+                          <div class="dropdown">
+                            <button class="txt dropdown-toggle no-bg navy p-2 half-opacity" type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false">
+                              Funds Available
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                          </div>
+                        </th>
+                        <th scope="col" class="row-status"><p class="txt half-opacity p-2">Status</p></th>
+                        <th scope="col" class="row-cards"><p class="txt half-opacity p-2">Cards</p></th>
+                        <th scope="col" class="row-btn"></th>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr class="">
-                        <td class="row-name">
+                      <tr>
+                        <th scope="row" class="row-name">
+                          <div class="p-2">
                             <div class="img-wrapper d-inline-block"><img src="images/dynamic/user-img.jpg" alt=""></div>
                             <p class="txt d-none d-lg-inline-block mx-2">Mabel Greene</p>
-                          </td>
-                        <td class="row-dep"><p class="txt px-2 py-3">HR</p></td>
-                        <td class="row-fund"><p class="txt px-2 py-3">$120,542.00</p></td>
-                        <td class="row-status"><p class="txt px-2 py-3 disabled"><span class="d-inline-block align-middle me-1 status-color"></span> Suspended</p></td>
+                          </div>
+                        </th>
+                        <td class="row-dep"><p class="txt p-2">HR</p></td>
+                        <td class="row-fund"><p class="txt p-2">$ 3,256.97</p></td>
+                        <td class="row-status"><p class="txt p-2"><span class="d-inline-block align-middle me-1 status-color"></span> Active</p></td>
                         <td class="row-cards">
-                          <ul class="px-2">
+                          <ul>
                             <li class="me-2 d-inline-block">
                               <img src="images/static/table-card-active.svg" alt="" class="d-inline-block">
                               <p class="txt d-inline-block">2</p>
@@ -208,18 +210,48 @@
                             </li>
                           </ul>
                         </td>
-                        <td class="row-view-btn"><div class="btn grey-btn float-end me-3">View</div></td>
+                        <td class="row-btn">
+                          <div class="btn grey-btn float-end">View</div>
+                        </td>
+                      </tr>
+                      <tr class="">
+                        <th scope="row" class="row-name">
+                          <div class="p-2">
+                            <div class="img-wrapper d-inline-block"><img src="images/dynamic/user-img.jpg" alt=""></div>
+                            <p class="txt d-none d-lg-inline-block mx-2">Ringo Star</p>
+                          </div>
+                        </th>
+                        <td class="row-dep"><p class="txt p-2">Commercial</p></td>
+                        <td class="row-fund"><p class="txt p-2">$ 3,256.97</p></td>
+                        <td class="row-status"><p class="txt p-2 disabled"><span class="d-inline-block align-middle me-1 status-color"></span> Suspended</p></td>
+                        <td class="row-cards">
+                          <ul>
+                            <li class="me-2 d-inline-block">
+                              <img src="images/static/table-card-active.svg" alt="" class="d-inline-block">
+                              <p class="txt d-inline-block">2</p>
+                            </li>
+                            <li class="me-2 d-inline-block">
+                              <img src="images/static/table-card-inactive.svg" alt="" class="d-inline-block">
+                              <p class="txt d-inline-block">3</p>
+                            </li>
+                          </ul>
+                        </td>
+                        <td class="row-btn">
+                          <div class="btn grey-btn float-end">View</div>
+                        </td>
                       </tr>
                       <tr>
-                        <td class="row-name">
+                        <th scope="row" class="row-name">
+                          <div class="p-2">
                             <div class="img-wrapper d-inline-block"><img src="images/dynamic/user-img.jpg" alt=""></div>
                             <p class="txt d-none d-lg-inline-block mx-2">Mabel Greene</p>
-                          </td>
-                        <td class="row-dep"><p class="txt px-2 py-3">HR</p></td>
-                        <td class="row-fund"><p class="txt px-2 py-3">$120,542.00</p></td>
-                        <td class="row-status"><p class="txt px-2 py-3"><span class="d-inline-block align-middle me-1 status-color"></span> Active</p></td>
+                          </div>
+                        </th>
+                        <td class="row-dep"><p class="txt p-2">HR</p></td>
+                        <td class="row-fund"><p class="txt p-2">$ 3,256.97</p></td>
+                        <td class="row-status"><p class="txt p-2"><span class="d-inline-block align-middle me-1 status-color"></span> Active</p></td>
                         <td class="row-cards">
-                          <ul class="px-2">
+                          <ul>
                             <li class="me-2 d-inline-block">
                               <img src="images/static/table-card-active.svg" alt="" class="d-inline-block">
                               <p class="txt d-inline-block">2</p>
@@ -230,10 +262,36 @@
                             </li>
                           </ul>
                         </td>
-                        <td class="row-view-btn"><div class="btn grey-btn float-end me-3">View</div></td>
+                        <td class="row-btn">
+                          <div class="btn grey-btn float-end">View</div>
+                        </td>
                       </tr>
                     </tbody>
                   </table>
+                </div>
+              </div>
+              <div class="row mb-5">
+                <div class="col-6">
+                  <p class="txt my-2">Total: 235</p>
+                </div>
+                <div class="col-6">
+                  <nav aria-label="...">
+                    <ul class="pagination float-end">
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">«</span>
+                        </a>
+                      </li>
+                      <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                          <span aria-hidden="true">»</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
                 </div>
               </div>
             </div>
@@ -323,33 +381,5 @@
         </div>
       </div>
     </div>
-
-    <script>
-      $(function() {
-        $('input[name="daterange"]').daterangepicker({
-          opens: 'left'
-        }, function(start, end, label) {
-          console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
-        });
-      });
-      </script>
-
-      <script>
-          $(document).ready(function() {
-            $('.table').DataTable({
-            //disable sorting on last column
-            "columnDefs": [
-              { "orderable": false, "targets": 5 }
-            ],
-            language: {
-              //customize pagination prev and next buttons: use arrows instead of words
-              'paginate': {
-                'previous': '<span><img src="images/static/arrow-left.svg"></span>',
-                'next': '<span><img src="images/static/arrow-right.svg"></span>'
-              }
-            }
-          }) 
-        });
-      </script>
 </body>
 </html>

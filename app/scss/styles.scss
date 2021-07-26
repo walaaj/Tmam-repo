@@ -333,7 +333,58 @@ footer{
     right: 14px;
     transform: translateY(-50%);
 }
-
+.card-min-height{
+    min-height: 478px;
+}
+.add-new-card{
+    border: 1px dashed rgba($color: $primary-color-navy, $alpha: .5);
+    a{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+    }
+    .add-new-content{
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+}
+.bgLowNavy{
+    &.p-absolute{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+}
+.edit-profile-img{
+    img{
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.edit-profile{
+    border: 1px solid $primary-color-navy;
+    position: absolute;
+    bottom: 20%;
+    right: 0;
+    background-color: $primary-color-white;
+    img{
+        height: 100%;
+        object-fit: none;
+    }
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+    border: none;
+}
+.nav-tabs {
+    border-bottom: none;
+}
 
 ///////////////////////////// TABLE STYLING /////////////////////////////
 .table-wrapper{
